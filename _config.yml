@@ -5,15 +5,19 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+# Theme Settings
+#theme                    : "minimal-mistakes-jekyll"
+remote_theme             : mmistakes/minimal-mistakes
+minimal_mistakes_skin    : "dark"
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Akiel Aries / My Notebook"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Akiel Aries"
+description              : #&description "UG Student @ NAU School of Informatics, Computing, & Cyber Systems"<wbr/>
+url                      : https://akielaries.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "akielaries.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -57,7 +61,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : &twitter "akielaries"
 facebook:
   username               :
   app_id                 :
@@ -80,14 +84,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
-  employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
+  name             : "Akiel Aries"
+  avatar           : "akiel_aries_avatar.png"
+  bio              : UG Student @ <a href="https://nau.edu/school-of-informatics-computing-and-cyber-systems/" target="_blank">NAU School of Informatics, Computing, & Cyber Systems </a>, studying Computer Science, Cybersecurity, & Mathemetics. <br> <br> IoT Researcher <br> @ NAU IoT <br> Teaching Assistant <br> @ NAU SICCS <br>
+  location         : "Flagstaff, AZ"
+  employer         :  
+  pubmed           : 
+  googlescholar    : 
+  email            : "aba275@nau.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,20 +100,20 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "akielaries"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  linkedin         : "akiel-aries/"
+  orcid            : 
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : "19002577/aaries"
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "akielaries"
   vine             :
   weibo            :
   xing             :
@@ -126,12 +130,12 @@ exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
-  - .bundle
+    #  - .bundle
   - .jekyll-assets-cache
   - .sass-cache
   - CHANGELOG
   - Capfile
-  - Gemfile
+    #- Gemfile
   - Gruntfile.js
   - LICENSE
   - README
@@ -142,10 +146,10 @@ exclude:
   - config
   - gulpfile.js
   - log
-  - node_modules
+#  - node_modules
   - package.json
   - tmp
-  - vendor
+#  - vendor
 keep_files:
   - .git
   - .svn
@@ -175,6 +179,9 @@ kramdown:
 
 # Collections
 collections:
+  about-me:
+    output: true
+    permalink: /:collection/:path/
   teaching:
     output: true
     permalink: /:collection/:path/
@@ -191,6 +198,17 @@ collections:
 
 # Defaults
 defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: about-me
+    values:
+      layout: single 
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
   # _posts
   - scope:
       path: ""
@@ -265,6 +283,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-remote-theme
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate

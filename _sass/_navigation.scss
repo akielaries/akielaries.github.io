@@ -83,7 +83,8 @@
       line-height: 1.5;
       text-align: center;
       text-decoration: none;
-      color: mix(#fff, $gray, 25%);
+      //color: mix(#fff, $gray, 25%);
+      color: #252a34;
       border: 1px solid $light-gray;
       border-radius: 0;
 
@@ -92,12 +93,15 @@
       }
 
       &.current {
-        color: #fff;
-        background: $primary-color;
+        //color: #fff;
+        color: #252a34;
+        //background: $primary-color;
+        background: #252a34;
       }
 
       &.disabled {
-        color: mix(#fff, $gray, 75%);
+        //color: mix(#fff, $gray, 75%);
+        color: #252a34;
         pointer-events: none;
         cursor: not-allowed;
       }
@@ -132,6 +136,7 @@
     text-align: center;
     text-decoration: none;
     color: mix(#fff, $gray, 50%);
+    //color: #252a34;
     border: 1px solid $light-gray;
     border-radius: $border-radius;
 
@@ -151,7 +156,8 @@
     }
 
     &.disabled {
-      color: mix(#fff, $gray, 75%);
+      //color: mix(#fff, $gray, 75%);
+      color: #252a34;
       pointer-events: none;
       cursor: not-allowed;
     }
@@ -175,7 +181,8 @@
 .greedy-nav {
   position: relative;
   min-width: 250px;
-  background: $background-color;
+  //background: $background-color;
+  background: #252a34;
 
   a {
     display: block;
@@ -232,7 +239,8 @@
         left: 0;
         bottom: 0;
         height: 4px;
-        background: mix(#fff, $primary-color, 50%);
+        //background: mix(#fff, $primary-color, 50%);
+        backgroung: #252a34;
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
@@ -257,7 +265,8 @@
     padding: 5px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    background: #fff;
+    //background: #fff;
+    background: #252a34;
     box-shadow: 0 0 10px rgba(#000, 0.25);
 
     a {
@@ -335,6 +344,7 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
     color: #fff;
+    //color: #252a34;
     font-weight: bold;
     background: $primary-color;
     border-radius: $border-radius;
@@ -372,9 +382,11 @@
 .toc {
   font-family: $sans-serif-narrow;
   color: $gray;
+  //color: #252a34;
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: #fff;
+  //background-color: #252a34;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
@@ -407,6 +419,7 @@
     &:hover {
       color: #000;
       background: $lighter-gray;
+      //background:#252a34;
     }
   }
 
