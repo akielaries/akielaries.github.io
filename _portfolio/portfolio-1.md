@@ -9,7 +9,6 @@ redirect_from:
 ---
 {% include base_path %}
 
-test
 ## Internal [IoT](https://in.nau.edu/its/iot-nau/){:target="\_blank"} Projects
 Since November of 2021, I have been working for the IoT team on our NAU campus. The team        <wbr/>
 is responsible for a number of projects with the overarching goal to make our campus smart with <wbr/>
@@ -66,3 +65,13 @@ Rover project using ROS and Python.
 More details soon...
 
 ___
+## Projects for fun
+<hr style="border:1px solid grey">
+## RPI-OS-tut
+Personal project started to get introduced to operating systems. 
+* With the help of many tutorials, datasheets, and a plethora of online resources, <wbr/> 
+built a simple and limited aarch32 & aarch64 operating system on the RPI 2, 3 and 4 <wbr/> 
+using ARM assembly and C. The goal is to create a functional OS capable of use as a <wbr/> 
+development environment. <wbr/>
+More details soon... read the README in the meantime!
+* [Source](https://github.com/akielaries/RPI-OS-tut){:target="\_blank"}
