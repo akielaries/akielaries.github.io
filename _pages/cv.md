@@ -46,7 +46,7 @@ Minority Participation(LSAMP) <br>
 Experience
 ======
 ---
-**Northern Arizona University – Teaching Assistant ** <br>
+**Northern Arizona University – Teaching Assistant** <br>
 **Flagstaff, AZ |** *2022-Current* <br>
 * TA for the CS department's Computing Tools courses: CS 105, CS 205, CS 305. 
 * Aid instruction on tools Engineers & Scientists use such as AWS, Docker, Git, Linux CLI, SSH, VMs, etc.
