@@ -93,7 +93,7 @@ internship while enrolled in courses. <wbr/>
 Projects
 ======
 ---
-**RPI-OS-tut |** *2022 - Present* <br>`
+**RPI-OS-tut |** *2022 - Present* <br> 
 Personal project started to get introduced to operating systems. 
 * With the help of many tutorials, datasheets, and a plethora of online resources, <wbr/> 
 built a simple and limited aarch32 & aarch64 operating system on the RPI 2, 3 and 4 <wbr/> 
