@@ -9,6 +9,7 @@ redirect_from:
 ---
 {% include base_path %}
 
+test
 ## Internal [IoT](https://in.nau.edu/its/iot-nau/){:target="\_blank"} Projects
 Since November of 2021, I have been working for the IoT team on our NAU campus. The team        <wbr/>
 is responsible for a number of projects with the overarching goal to make our campus smart with <wbr/>
