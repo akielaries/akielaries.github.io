@@ -69,7 +69,7 @@ ___
 <hr style="border:1px solid grey">
 ## RPI-OS-tut
 Personal project started to get introduced to operating systems. 
-* With the help of many tutorials, datasheets, and a plethora of online resources, <wbr/> 
+With the help of many tutorials, datasheets, and a plethora of online resources, <wbr/> 
 built a simple and limited aarch32 & aarch64 operating system on the RPI 2, 3 and 4 <wbr/> 
 using ARM assembly and C. The goal is to create a functional OS capable of use as a <wbr/> 
 development environment. <wbr/>
