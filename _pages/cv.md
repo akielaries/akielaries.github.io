@@ -46,21 +46,25 @@ Minority Participation(LSAMP) <br>
 Experience
 ======
 ---
+**Northern Arizona University – Teaching Assistant ** <br>
+**Flagstaff, AZ |** *2022-Current* <br>
+* TA for the CS department's Computing Tools courses: CS 105, CS 205, CS 305. 
+* Aid instruction on tools Engineers & Scientists use such as AWS, Docker, Git, Linux CLI, SSH, VMs, etc.
+
 **Northern Arizona University – IoT Researcher** <br>
 **Flagstaff, AZ |** *2021-Current* <br>
-A part of the Internet of Things (IoT) team responsible for various in-house </wbr>
-developments and collaborative projects in the NAU Computer Science, Electrical </wbr>
-Engineering, and Mechanical Engineering departments. </wbr>
-
+A part of the Internet of Things (IoT) team responsible for various in-house <wbr/>
+developments and collaborative projects in the NAU Computer Science, Electrical <wbr/>
+Engineering, and Mechanical Engineering departments. <wbr/>
 * Prototyped with Arduino and Raspberry Pi devices as well as various peripherals. <wbr/>
-* Sketched schematics, prototyped on breadboards, soldered components, and </wbr>
+* Sketched schematics, prototyped on breadboards, soldered components, and <wbr/>
 designed Printed Circuit Boards (PCB). <wbr/>
-* Used C++ and Python programming languages to read from sensors on campus </wbr>
+* Used C++ and Python programming languages to read from sensors on campus <wbr/>
 occasionally utilizing C alongside AVR-GCC for programming Atmel microcontrollers. <wbr/>
 * Scheduled Python scripts using cron to store readings in database collections. <wbr/>
 
 **Northern Arizona University – Systems Analyst** <br>
-**Flagstaff, AZ |** *2021-Current* <br>
+**Flagstaff, AZ |** *2021-2022* <br>
 * Arranged access for those associated with NAU (contractors, visiting faculty, <wbr/>
 researchers, etc.) <wbr/> 
 * Maintained duplicate accounts occurring in the Peoplesoft/Louie databases, <wbr/> 
