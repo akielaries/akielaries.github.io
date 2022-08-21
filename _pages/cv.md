@@ -15,11 +15,11 @@ Education
 ======
 ---
 **Northern Arizona University** <br>
-**Flagstaff, AZ |** *2021-2023* <br>
+**Flagstaff, AZ |** *2021 - 2023* <br>
 Bachelor of Science in Computer Science, Minor in Cybersecurity and Mathematics <wbr/>
 
 **Metropolitan State University of Denver** <br>
-**Denver, CO |** *2019-2020 (Transferred)* <br>
+**Denver, CO |** *2019 - 2020 (Transferred)* <br>
 Bachelor of Science in Computer Science, Minor in Mathematics <wbr/>
 
 Relevant Coursework
@@ -47,12 +47,12 @@ Experience
 ======
 ---
 **Northern Arizona University – Teaching Assistant** <br>
-**Flagstaff, AZ |** *2022-Current* <br>
+**Flagstaff, AZ |** *2022 - Present* <br>
 * TA for the CS department's Computing Tools courses: CS 105, CS 205, CS 305. 
 * Aid instruction on tools Engineers & Scientists use such as AWS, Docker, Git, Linux CLI, SSH, VMs, etc.
 
 **Northern Arizona University – IoT Researcher** <br>
-**Flagstaff, AZ |** *2021-Current* <br>
+**Flagstaff, AZ |** *2021 - Present* <br>
 A part of the Internet of Things (IoT) team responsible for various in-house <wbr/>
 developments and collaborative projects in the NAU Computer Science, Electrical <wbr/>
 Engineering, and Mechanical Engineering departments. <wbr/>
@@ -64,19 +64,25 @@ occasionally utilizing C alongside AVR-GCC for programming Atmel microcontroller
 * Scheduled Python scripts using cron to store readings in database collections. <wbr/>
 
 **Northern Arizona University – Systems Analyst** <br>
-**Flagstaff, AZ |** *2021-2022* <br>
+**Flagstaff, AZ |** *2021 - 2022* <br>
 * Arranged access for those associated with NAU (contractors, visiting faculty, <wbr/>
 researchers, etc.) <wbr/> 
 * Maintained duplicate accounts occurring in the Peoplesoft/Louie databases, <wbr/> 
 the backbone of the university’s system. <wbr/> 
 
+**Northern Arizona University – Information Desk Staff** <br>
+**Flagstaff, AZ |** *2021 - 2021* <br>
+* Served as the main information support for campus events and operations, <wbr/> 
+leading the information desk at the Student Union and Dubois Center. Set up and <wbr/> 
+troubleshoot audiovisual equipment (laptops, projectors, sound systems, microphones, etc.) 
+
 **Self Employed – Web Developer** <br>
-*2020-2020* <br>
+*2020 - 2020* <br>
 * Performed freelance work creating websites for various clients (Nail/Hair <wbr/> 
 Salons, Barbershops, etc.) utilizing WordPress as well as HTML, CSS, and PHP. <wbr/> 
 
 **Ascent Services Group – Intern/Jr. Data Analyst** <br>
-**Denver, CO |** *2019-2019* <br>
+**Denver, CO |** *2019 - 2019* <br>
 * Performed testing on company websites and the local messenger application as <wbr/> 
 well as tasks related to data entry and analysis particularly with Job Diva and <wbr/> 
 other job board applications. <wbr/>
@@ -87,14 +93,14 @@ internship while enrolled in courses. <wbr/>
 Projects
 ======
 ---
-**RPI-OS-tut |** *08/2022 - Present* <br>
+**RPI-OS-tut |** *2022 - Present* <br>`
 Personal project started to get introduced to operating systems. 
 * With the help of many tutorials, datasheets, and a plethora of online resources, <wbr/> 
 built a simple and limited aarch32 & aarch64 operating system on the RPI 2, 3 and 4 <wbr/> 
 using ARM assembly and C. The goal is to create a functional OS capable of use as a <wbr/> 
 development environment. <wbr/>
 
-**SenseCap Weather Station |** *2022-Current* <br>
+**SenseCap Weather Station |** *2022 - Present* <br>
 **NAU IoT and School of Informatics, Computing, and Cyber Systems (SICCS)** <br>
 Project for the DISCOVER CCRI research study which allows computer scientists <wbr/> 
 and engineers to study how IoT devices and networks can be designed to work in <wbr/> 
@@ -103,7 +109,7 @@ technically challenging areas. <wbr/>
 that measures various climate related parameters in an instance of InfluxDB. <wbr/> 
 The node will be mounted on our Mountain Campus for public utilization. <wbr/>
 
-**Climate Indicator Node |** *2022-Current* <br>
+**Climate Indicator Node |** *2022 - Present* <br>
 **NAU IoT** <br>
 Homegrown weather-station created for the NAU IoT Lab as a learning tool for <wbr/> 
 future students and researchers. <wbr/>
