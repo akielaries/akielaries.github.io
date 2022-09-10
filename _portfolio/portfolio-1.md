@@ -59,10 +59,9 @@ paramaters it reads in and publish them over MQTT. The weather station node is h
 Rasperberry Pi 4 and will then be put on our NAU mountain campus to publish values for others
 to see.
 
-### Robotics RoverAPI using ROS (Robot Operating System)
+### Test Site Surveillance
 
-Rover project using ROS and Python.
-More details soon...
+Details coming soon
 
 ___
 ## Projects for fun
@@ -75,3 +74,11 @@ using ARM assembly and C. The goal is to create a functional OS capable of use a
 development environment. <wbr/>
 More details soon... read the README in the meantime!
 * [Source](https://github.com/akielaries/RPI-OS-tut){:target="\_blank"}
+
+## TCP/IP Stack
+More details soon... read the README in the meantime!
+* [Source](https://github.com/akielaries/tcp-ip-stack){:target="\_blank"}
+
+## lisp
+More details soon... read the README in the meantime!
+* [Source](https://github.com/akielaries/lisp){:target="\_blank"}
