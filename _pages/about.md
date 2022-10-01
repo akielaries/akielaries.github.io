@@ -8,10 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-Hello, my name is Akiel Aries and welcome to my website. I am currently an undergraduate student 
+Welcome to my website. I am currently an undergraduate student 
 at Northern Arizona University's [School of Informatics, Computing, and Cyber Systems (SICCS)](https://nau.edu/school-of-informatics-computing-and-cyber-systems/){:target="\_blank"}. 
 I am majoring in Computer Science with minors in both Cybersecurity & Mathematics while also heavily pursuing 
-my interests, spanning from Physics & Electrical Engineering to Statistics & Data Science (and much more). 
+my interests, spanning from Physics & Electrical Engineering to many other fields of applied and pure mathematics.  
 
 I am currently working for NAU's Internet of Things (IoT) team, which is responsible for a number of in house 
 developements and collaborative projects with SICCS R&D teams, such as the [DISCOVER research study](https://discoverccri.org/){:target="\_blank"}. 
