@@ -16,11 +16,6 @@ integration of various micro devices and services across campus. I have had the 
 works on a number of interesting projects.  <wbr/>
 
 <hr style="border:0.5px solid grey">
-### NAU Live Dashboard  
-
-Goal of this project is to use the BACnet communication protocol to display the               <wbr/>
-live energy consumption of each building located on the NAU Mountain Campus and display         <wbr/>
-those values to a website.  <wbr/>
 
 ### Climate Indicator Project
 
@@ -60,25 +55,37 @@ Rasperberry Pi 4 and will then be put on our NAU mountain campus to publish valu
 to see.
 
 ### Test Site Surveillance
-
-Details coming soon
+For the grant renewal demo with the National Science Foundation(NSF), I was able
+to develop a RTSP streaming tool built with openCV, Flask, and ngrok. This allowed for 
+researchers to view the Discover CCRI test site located near the SICCS building on the
+NAU mountain campus. The test site serves as a track for the terrestrial robots to show
+off their functionalities. 
 
 ___
 ## Projects for fun
 <hr style="border:1px solid grey">
-## RPI-OS-tut
+## vpaSTRM
+Originally spawned and forked from the test site surveillance project done for the Discover 
+CCRI research study with the intention to improve the core functionality of the existing application
+and add other features as well as serve as an opensource effort (assuming other find this useful). 
+From scratch, using FFMPEG libraries and much of the existing FFMPEG softwares functionality, lots
+of documentaion and examples, the goal is to create software that is able to convert videos to pictures
+frame by frame, an HTTP client for live, viewable streaming purposes, a GUI using GTK + ncurses, amongst 
+many more.
+
+Check it out here!
+* [Source](https://github.com/akielaries/vpaSTRM){:target="\_blank"}
+
+## RPI-OS
 Personal project started to get introduced to operating systems. 
 With the help of many tutorials, datasheets, and a plethora of online resources, <wbr/> 
 built a simple and limited aarch32 & aarch64 operating system on the RPI 2, 3 and 4 <wbr/> 
 using ARM assembly and C. The goal is to create a functional OS capable of use as a <wbr/> 
 development environment. <wbr/>
+
 More details soon... read the README in the meantime!
 * [Source](https://github.com/akielaries/RPI-OS-tut){:target="\_blank"}
 
 ## TCP/IP Stack
-More details soon... read the README in the meantime!
+More details soon... view the README in the meantime!
 * [Source](https://github.com/akielaries/tcp-ip-stack){:target="\_blank"}
-
-## lisp
-More details soon... read the README in the meantime!
-* [Source](https://github.com/akielaries/lisp){:target="\_blank"}
