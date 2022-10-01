@@ -83,7 +83,7 @@ built a simple and limited aarch32 & aarch64 operating system on the RPI 2, 3 an
 using ARM assembly and C. The goal is to create a functional OS capable of use as a <wbr/> 
 development environment. <wbr/>
 
-More details soon... read the README in the meantime!
+More details soon... view the README in the meantime!
 * [Source](https://github.com/akielaries/RPI-OS-tut){:target="\_blank"}
 
 ## TCP/IP Stack
