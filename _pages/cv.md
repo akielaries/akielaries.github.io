@@ -93,7 +93,16 @@ internship while enrolled in courses. <wbr/>
 Projects
 ======
 ---
+**vpaSTRM |** *2022 - Present* <br> 
+Video processing and manipulation software originally forked from the test site 
+surveillance project for the DiscoverCCRI study.
+* Created a simple video to image converter in C using FFMPEG libs with future 
+functionalities of live stream amongst many other features.
+* Building a GTK + ncurses GUI as an option to use instead of the CLI.
+
 **RPI-OS-tut |** *2022 - Present* <br> 
+
+**RPI-OS |** *2022 - Present* <br> 
 Personal project started to get introduced to operating systems. 
 * With the help of many tutorials, datasheets, and a plethora of online resources, <wbr/> 
 built a simple and limited aarch32 & aarch64 operating system on the RPI 2, 3 and 4 <wbr/> 
