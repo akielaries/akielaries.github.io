@@ -22,3 +22,15 @@ Data Analysis, Systems Management, etc.  View my [CV & Resume](https://akielarie
 This website serves as a display of myself, [work & projects](https://akielaries.github.io/portfolio/){:target="\_blank"}, and 
 [interests](https://akielaries.github.io/interests/){:target="\_blank"}, which inludes a surplus of reads and materials I used for learning on my own.
 
+# Currently...
+* Work + Courses
+* Learning Rust + a bit of OCaml
+* Projects
+  * [vpaSTRM](https://github.com/akielaries/vpaSTRM)
+  * [RPI-OS](https://github.com/akielaries/RPI-OS)
+* Reading: 
+  * [Programming Languages: Application and Interpretation](https://cs.brown.edu/courses/cs173/2012/book/Introduction.html#%28part._.Our_.Philosophy%29)
+  * [TCP/IP: Architecture, Protocols, and Implementation by Sidnie Felt](https://books.google.com/books?id=6U50AQAACAAJ&source=gbs_book_other_versions)
+  * [The DHCP Handbook by Ralph Droms, Ted Lemon](https://books.google.com/books/about/The_DHCP_Handbook.html?id=rCGjQgAACAAJ)
+  * [3-D Image Processing Algorithms by Nikolaidis Pitas](https://www.amazon.com/3-D-Image-Processing-Algorithms-Nikolaidis/dp/0471377368)
+
