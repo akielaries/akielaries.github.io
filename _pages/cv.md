@@ -100,7 +100,12 @@ surveillance project for the DiscoverCCRI study.
 functionalities of live stream amongst many other features.
 * Building a GTK + ncurses GUI as an option to use instead of the CLI.
 
-**RPI-OS-tut |** *2022 - Present* <br> 
+**Test Site Surveillance |** *2022 - Present* <br> 
+**NAU DiscoverCCRI (Distributed Sensing and Computing Over Sparse Environments)**
+* Created a simple application for the NSF grant renewal demo to view the test site <wbr/>
+for our stationary nodes and terrestrial robots. Using Python, ngrok, openCV, and <wbr/>
+additional libraries, developed public-facing IP Camera RTSP stream accessible by <wbr/>
+reasearchers. 
 
 **RPI-OS |** *2022 - Present* <br> 
 Personal project started to get introduced to operating systems. 
@@ -110,7 +115,7 @@ using ARM assembly and C. The goal is to create a functional OS capable of use a
 development environment. <wbr/>
 
 **SenseCap Weather Station |** *2022 - Present* <br>
-**NAU IoT and School of Informatics, Computing, and Cyber Systems (SICCS)** <br>
+**NAU DiscoverCCRI** <br>
 Project for the DISCOVER CCRI research study which allows computer scientists <wbr/> 
 and engineers to study how IoT devices and networks can be designed to work in <wbr/> 
 technically challenging areas. <wbr/>
