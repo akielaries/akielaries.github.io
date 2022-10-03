@@ -51,7 +51,7 @@ Experience
 * TA for the CS department's Computing Tools courses: CS 105, CS 205, CS 305. 
 * Aid instruction on tools Engineers & Scientists use such as AWS, Docker, Git, Linux CLI, SSH, VMs, etc.
 
-**Northern Arizona University – IoT Researcher** <br>
+**Northern Arizona University – Software Systems Engineer** <br>
 **Flagstaff, AZ |** *2021 - Present* <br>
 A part of the Internet of Things (IoT) team responsible for various in-house <wbr/>
 developments and collaborative projects in the NAU Computer Science, Electrical <wbr/>
