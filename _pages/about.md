@@ -27,7 +27,7 @@ This website serves as a display of myself, [work & projects](https://akielaries
 * Learning Rust + a bit of OCaml
 * Projects
   * [vpaSTRM](https://github.com/akielaries/vpaSTRM)
-  * [SADL](https://github.com/akielaries/SADL)
+  * [ADL-pkg](https://github.com/akielaries/ADL-pkg)
   * [RPI-OS](https://github.com/akielaries/RPI-OS)
 * Reading: 
   * [Programming Languages: Application and Interpretation](https://cs.brown.edu/courses/cs173/2012/book/Introduction.html#%28part._.Our_.Philosophy%29)
