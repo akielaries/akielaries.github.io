@@ -29,7 +29,7 @@ This website serves as a display of myself, [work & projects](https://akielaries
   previous work with the DiscoverCCRI research laboratory. Video + image manipulation as well as processing using algorithms such as Fast
   Fourier Transform, Gaussian Blur, Discrete Cosine Tranform, and many more. Currently a command line tool with future plans for a 
   GTK-based GUI. 
-  * [ADL-pkg](https://github.com/akielaries/ADL-pkg) - A reusable C++ mathematics library inspired from work done for CS 499 
+  * [RM-pkg](https://github.com/akielaries/ADL-pkg) - A reusable C++ mathematics library inspired from work done for CS 499 
   Deep Learning and vpaSTRM.
   * [RPI-OS](https://github.com/akielaries/RPI-OS) - Operating System for the Raspberry Pi 2 written in C, AArch32 & AArch64 assembly with planned support for the 3 & 4. 
 * Reading: 
