@@ -9,14 +9,6 @@ redirect_from:
 ---
 {% include base_path %}
 
-## Internal [IoT](https://in.nau.edu/its/iot-nau/){:target="\_blank"} Projects
-Since November of 2021, I have been working for the IoT team on our NAU campus. The team        <wbr/>
-is responsible for a number of projects with the overarching goal to make our campus smart with <wbr/>
-integration of various micro devices and services across campus. I have had the privledge to    <wbr/> 
-works on a number of interesting projects.  <wbr/>
-
-<hr style="border:0.5px solid grey">
-
 ### Climate Indicator Project
 
 Under the lead Electrical Engineer, I was assigned a project with the goal of creating          <wbr/>
@@ -64,6 +56,24 @@ off their functionalities.
 ___
 ## Projects for fun
 <hr style="border:1px solid grey">
+
+## openMTPK
+openMTPK is a open-source mathematics package written in C++ with language bindings available for 
+Fortran, OCaml, Python, and R. The goal is to make a reusable mathematics library covering an 
+array of topics for an array of uses.
+Starting with some implementations of basics of different mathematical topics like Arithmetic, 
+Calculus, Statistics, Linear Algebra, etc. in conjunction with more advanced algorithms seen in 
+the blend of such topics, branches of Machine Learning, Image Processing and much more. Some of 
+the modules operate in a circular dependant way, for example arithmetic operations seen in 
+linear algebra vector operations that can be seen in algorithms implemented in the deep learning module.
+Some of these implementations were first prototypes in Wolfram Mathetmatica, then converted to 
+C++ code for the package. Look in the drivers folder for examples on using these tools in your 
+own project. 
+
+* [Source Code](https://github.com/akielaries/openMTPK)
+* [Documentation](https://akielaries.github.io/openMTPK/)
+* [PyPI Package](https://pypi.org/project/openmtpk/)
+
 ## vpaSTRM
 Originally spawned and forked from the test site surveillance project done for the Discover 
 CCRI research study with the intention to improve the core functionality of the existing application
