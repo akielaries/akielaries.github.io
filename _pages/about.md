@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Currently an undergraduate Computer Science student at Northern Arizona University extensive coursework and interest in 
+Currently an undergraduate Computer Science student at Northern Arizona University with extensive coursework and interest in 
 Cybersecurity, Pure & Applied Mathematics, Physics & Electrical Engineering.  
 
 I am currently working as a Software Systems Engineer for NAU's 
