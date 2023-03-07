@@ -15,9 +15,6 @@ I am currently working as a Software Systems Engineer for NAU's
 Internet of Things (IoT) team and the [DISCOVERCCRI CS/EE research lab](https://discoverccri.org/){:target="\_blank"}. 
 View my [CV](https://akielaries.github.io/cv/){:target="\_blank"} for more on my professional experience.
 
-This website serves as a display of myself, [work & projects](https://akielaries.github.io/portfolio/){:target="\_blank"}, and 
-[interests](https://akielaries.github.io/interests/){:target="\_blank"}, which inludes a surplus of reads and materials I used 
-for learning on my own.
 
 # Currently...
 * Projects
