@@ -9,93 +9,17 @@ redirect_from:
 ---
 {% include base_path %}
 
-### Climate Indicator Project
-
-Under the lead Electrical Engineer, I was assigned a project with the goal of creating          <wbr/>
-a weather station. I decided from scratch utilizing breadboards, microcontrollers, sensor       <wbr/>
-shields, many resistors and wires, was the best way. After learning basic Physics of EE         <wbr/>
-(voltage, resistance, current, etc) I was ready to get started.                                 <wbr/>
-
-Idea is to use the ATMEGA2560 as a host microcontroller and utilize an ESP module (D1 Mini Pro, <wbr/>
-or bare ESP82066 module) to give the MCU internet connectivity for publishing values. The values<wbr/> 
-will be published via MQTT and fed into an instance of InfluxDB hosted on a RPI 4. The data can <wbr/>
-be visualized in a number of way (will likely go with grafana.) The mass amounts of readings    <wbr/>
-sent into the DB are subject to statistical analysis in this case the implementation of the     <wbr/>
-Python lib Pandas will be used which will also be used in the visual implementation stage...    <wbr/>
-Final result will contain necessary peripherals on a Printed Circuit Board (PCB).               <wbr/>
-* [Source](https://github.com/akielaries/CIP_pub){:target="\_blank"}
-
-___
-## DiscoverCCRI [(Distributed Sensing & Computing Over Sparse Environments)](https://discoverccri.org/){:target="\_blank"}
-<hr style="border:1px solid grey">
-A collaboration project including Northern Arizona University's School of Informatics,          <wbr/>
-Computing, and Cyber Systems, Clemson University's Holcombe Department of Electrical and        <wbr/>
-Computer Engineering and Navajo Technical University, Distributed Sensing and Computing Over    <wbr/>
-Sparse Environments (DISCOVER), is building a network of field sites to allow researchers to    <wbr/>
-study distributed computing and networking in rural and remote areas to empower detection and   <wbr/>
-response to environmental and civil disasters. The DISCOVER cyberinfrastructure will allow      <wbr/>
-computer scientists and engineers to study how IoT devices and networks can be designed to      <wbr/>
-work in technically challenging rural or remote areas.                                          <wbr/>
-This research project had tasked the IoT team with building some fundamental tools to allow     <wbr/>
-researchers on this projects to get started.                                                    <wbr/>
-
-### Weather Station
-
-Using the Seeed SenseCAP ONE S900 Compact Weather Station, the goal is to collect the nine
-paramaters it reads in and publish them over MQTT. The weather station node is hosted by a
-Rasperberry Pi 4 and will then be put on our NAU mountain campus to publish values for others
-to see.
-
-### Test Site Surveillance
-For the grant renewal demo with the National Science Foundation(NSF), I was able
-to develop a RTSP streaming tool built with openCV, Flask, and ngrok. This allowed for 
-researchers to view the Discover CCRI test site located near the SICCS building on the
-NAU mountain campus. The test site serves as a track for the terrestrial robots to show
-off their functionalities. 
-
-___
-## Projects for fun
-<hr style="border:1px solid grey">
-
 ## openMTPK
-openMTPK is a open-source mathematics package written in C++ with language bindings available for 
-Fortran, OCaml, Python, and R. The goal is to make a reusable mathematics library covering an 
-array of topics for an array of uses.
-Starting with some implementations of basics of different mathematical topics like Arithmetic, 
-Calculus, Statistics, Linear Algebra, etc. in conjunction with more advanced algorithms seen in 
-the blend of such topics, branches of Machine Learning, Image Processing and much more. Some of 
-the modules operate in a circular dependant way, for example arithmetic operations seen in 
-linear algebra vector operations that can be seen in algorithms implemented in the deep learning module.
-Some of these implementations were first prototypes in Wolfram Mathetmatica, then converted to 
-C++ code for the package. Look in the drivers folder for examples on using these tools in your 
-own project. 
-
 * [Source Code](https://github.com/akielaries/openMTPK)
 * [Documentation](https://akielaries.github.io/openMTPK/)
 * [PyPI Package](https://pypi.org/project/openmtpk/)
 
 ## vpaSTRM
-Originally spawned and forked from the test site surveillance project done for the Discover 
-CCRI research study with the intention to improve the core functionality of the existing application
-and add other features as well as serve as an opensource effort (assuming other find this useful). 
-From scratch, using FFMPEG libraries and much of the existing FFMPEG softwares functionality, lots
-of documentaion and examples, the goal is to create software that is able to convert videos to pictures
-frame by frame, an HTTP client for live, viewable streaming purposes, a GUI using GTK + ncurses, amongst 
-many more.
-
-Check it out here!
-* [Source](https://github.com/akielaries/vpaSTRM){:target="\_blank"}
+* [Source Code](https://github.com/akielaries/vpaSTRM){:target="\_blank"}
 
 ## RPI-OS
-Personal project started to get introduced to operating systems. 
-With the help of many tutorials, datasheets, and a plethora of online resources, <wbr/> 
-built a simple and limited aarch32 & aarch64 operating system on the RPI 2, 3 and 4 <wbr/> 
-using ARM assembly and C. The goal is to create a functional OS capable of use as a <wbr/> 
-development environment. <wbr/>
-
-More details soon... view the README in the meantime!
-* [Source](https://github.com/akielaries/RPI-OS-tut){:target="\_blank"}
+* [Source Code](https://github.com/akielaries/RPI-OS-tut){:target="\_blank"}
 
 ## TCP/IP Stack
 More details soon... view the README in the meantime!
-* [Source](https://github.com/akielaries/tcp-ip-stack){:target="\_blank"}
+* [Source Code](https://github.com/akielaries/tcp-ip-stack){:target="\_blank"}
