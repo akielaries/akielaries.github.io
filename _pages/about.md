@@ -11,15 +11,15 @@ redirect_from:
 Currently an undergraduate Computer Science student at Northern Arizona University with extensive coursework and interest in 
 Cybersecurity, Pure & Applied Mathematics, Physics & Electrical Engineering.  
 
-I am currently working as a Software Systems Engineer for NAU's 
-Internet of Things (IoT) team and the [DISCOVERCCRI CS/EE research lab](https://discoverccri.org/){:target="\_blank"}. 
+I am currently working as a Software Engineering Intern with Juniper Network's Operating Systems team and as a Software Systems 
+Engineer for NAU's Internet of Things (IoT) team and the [DiscoverCCRI CS/EE research project](https://discoverccri.org/){:target="\_blank"}. 
 View my [CV](https://akielaries.github.io/cv/){:target="\_blank"} for more on my professional experience.
 
 
 # Currently...
 * Projects
-  * [openMTPK](https://github.com/akielaries/openMTPK) - General purpose Open Source Mathematics Package written in C++ 
-  with APIs for Python, R, OCaml, Fortran. Covers Arithmetic, Linear Algebra, Machine Learning, Number Theory, and much more. 
+  * [openMTPK](https://github.com/akielaries/openMTPK) - General purpose Open Source Mathematics Package written in C++, C and Fortran. 
+  Covers Arithmetic, Linear Algebra, Machine Learning, Number Theory, and much more. 
   * [vpaSTRM](https://github.com/akielaries/vpaSTRM) - Lightweight Computer Vision software, written in C, inspired from
   previous work with the DiscoverCCRI research laboratory. Video + image manipulation as well as processing using algorithms such as Fast
   Fourier Transform, Gaussian Blur, Discrete Cosine Tranform, and many more. Currently a command line tool with future plans for a 
