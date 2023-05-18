@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 Currently an undergraduate Computer Science student at Northern Arizona University with extensive coursework and interest in 
-Cybersecurity, Pure & Applied Mathematics, Physics & Electrical Engineering.  
+Cybersecurity, Pure & Applied Mathematics, Electrical Engineering & Physics.  
 
 I am currently working as a Software Engineering Intern with Juniper Network's Operating Systems team and as a Software Systems 
 Engineer for NAU's Internet of Things (IoT) team and the [DiscoverCCRI CS/EE research project](https://discoverccri.org/){:target="\_blank"}. 
