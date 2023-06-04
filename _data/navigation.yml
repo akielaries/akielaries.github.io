@@ -6,11 +6,11 @@ main:
   - title: "CV & Resume"
     url: /cv/
 
-  - title: "Teaching"
+  - title: "TA"
     url: /teaching/
   
-  - title: "openMTPK"
-    url: /openMTPK/
+  - title: "openGPMP"
+    url: /openGPMP/
     
       # - title: "Guide"
       #url: /markdown/
