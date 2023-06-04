@@ -9,10 +9,10 @@ redirect_from:
 ---
 {% include base_path %}
 
-## openMTPK
-* [Source Code](https://github.com/akielaries/openMTPK)
-* [Documentation](https://akielaries.github.io/openMTPK/)
-* [PyPI Package](https://pypi.org/project/openmtpk/)
+## openGPMP
+* [Source Code](https://github.com/akielaries/openGPMP)
+* [Documentation](https://akielaries.github.io/openGPMP/)
+* [PyPI Package](https://pypi.org/project/pygpmp/)
 
 ## vpaSTRM
 * [Source Code](https://github.com/akielaries/vpaSTRM){:target="\_blank"}
