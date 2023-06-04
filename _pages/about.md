@@ -18,7 +18,7 @@ View my [CV](https://akielaries.github.io/cv/){:target="\_blank"} for more on my
 
 # Currently...
 * Projects
-  * [openMTPK](https://github.com/akielaries/openMTPK) - General purpose Open Source Mathematics Package written in C++, C and Fortran. 
+  * [openGPMP](https://github.com/akielaries/openGPMP) - General purpose Open Source Mathematics Package written in C++, C and Fortran. 
   Covers Arithmetic, Linear Algebra, Machine Learning, Number Theory, and much more. 
   * [vpaSTRM](https://github.com/akielaries/vpaSTRM) - Lightweight Computer Vision software, written in C, inspired from
   previous work with the DiscoverCCRI research laboratory. Video + image manipulation as well as processing using algorithms such as Fast
