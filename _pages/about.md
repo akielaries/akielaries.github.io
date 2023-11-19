@@ -8,10 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-Currently an undergraduate Computer Science student at Northern Arizona University with extensive coursework and interest in 
+Currently a Computer Science student at Northern Arizona University with extensive coursework and interest in 
 Cybersecurity, Pure & Applied Mathematics, Electrical Engineering & Physics.  
 
-I am currently working as a Software Engineering Intern with Juniper Network's Operating Systems team and as a Software Systems 
+I am currently working as a Software Systems 
 Engineer for NAU's Internet of Things (IoT) team and the [DiscoverCCRI CS/EE research project](https://discoverccri.org/){:target="\_blank"}. 
 View my [CV](https://akielaries.github.io/cv/){:target="\_blank"} for more on my professional experience.
 
@@ -24,4 +24,6 @@ View my [CV](https://akielaries.github.io/cv/){:target="\_blank"} for more on my
   previous work with the DiscoverCCRI research laboratory. Video + image manipulation as well as processing using algorithms such as Fast
   Fourier Transform, Gaussian Blur, Discrete Cosine Tranform, and many more. Currently a command line tool with future plans for a 
   GTK-based GUI. 
-  * [RPI-OS](https://github.com/akielaries/RPI-OS) - Operating System for the Raspberry Pi 2 written in C, AArch32 & AArch64 assembly with planned support for the 3 & 4. 
+  * [piOS](https://github.com/akielaries/piOS) - Operating System for the Raspberry Pi 2 written in C and ARM assembly with planned support for the 3 & 4.
+  * [cppREPL](https://github.com/akielaries/cppREPL) - Simple C++ interactice shell using incremental compilation.
+  * [i2cscan](https://github.com/akielaries/i2cscan) - A simple I2C utility scanning for available I2C busses and addresses similar to i2cdetect from linux's [i2c-tools](https://git.kernel.org/pub/scm/utils/i2c-tools/i2c-tools.git/).
