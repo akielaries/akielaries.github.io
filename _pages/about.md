@@ -24,6 +24,6 @@ View my [CV](https://akielaries.github.io/cv/){:target="\_blank"} for more on my
   previous work with the DiscoverCCRI research laboratory. Video + image manipulation as well as processing using algorithms such as Fast
   Fourier Transform, Gaussian Blur, Discrete Cosine Tranform, and many more. Currently a command line tool with future plans for a 
   GTK-based GUI. 
-  * [piOS](https://github.com/akielaries/piOS) - Operating System for the Raspberry Pi 2 written in C and ARM assembly with planned support for the 3 & 4.
-  * [cppREPL](https://github.com/akielaries/cppREPL) - Simple C++ interactice shell using incremental compilation.
+  * [piOS](https://github.com/akielaries/piOS) - Operating System for the Raspberry Pi 1, 2, 3, & 4 written in C and ARM assembly.
+  * [cppREPL](https://github.com/akielaries/cppREPL) - Simple C++ interactive shell using incremental compilation.
   * [i2cscan](https://github.com/akielaries/i2cscan) - A simple I2C utility scanning for available I2C busses and addresses similar to i2cdetect from linux's [i2c-tools](https://git.kernel.org/pub/scm/utils/i2c-tools/i2c-tools.git/).
