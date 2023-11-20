@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "Projects"
 permalink: /portfolio/
 excerpt: "Portfolio"
 author_profile: true
@@ -14,12 +14,14 @@ redirect_from:
 * [Documentation](https://akielaries.github.io/openGPMP/)
 * [PyPI Package](https://pypi.org/project/pygpmp/)
 
+## i2cscan
+* [Source Code](https://github.com/akielaries/i2cscan){:target="\_blank"}
+
+## cppREPL
+* [Source Code](https://github.com/akielaries/cppREPL){:target="\_blank"}
+
 ## vpaSTRM
 * [Source Code](https://github.com/akielaries/vpaSTRM){:target="\_blank"}
 
-## RPI-OS
-* [Source Code](https://github.com/akielaries/RPI-OS-tut){:target="\_blank"}
-
-## TCP/IP Stack
-More details soon... view the README in the meantime!
-* [Source Code](https://github.com/akielaries/tcp-ip-stack){:target="\_blank"}
+## piOS
+* [Source Code](https://github.com/akielaries/piOS){:target="\_blank"}
