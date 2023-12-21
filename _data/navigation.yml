@@ -6,9 +6,6 @@ main:
   - title: "CV & Resume"
     url: /cv/
 
-  - title: "TA"
-    url: /teaching/
-  
   - title: "openGPMP"
     url: /openGPMP/
 
