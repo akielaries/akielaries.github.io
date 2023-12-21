@@ -8,22 +8,37 @@ redirect_from:
   - /about.html
 ---
 
-Currently a Computer Science student at Northern Arizona University with extensive coursework and interest in 
-Cybersecurity, Pure & Applied Mathematics, Electrical Engineering & Physics.  
+I am a recent Computer Science graduate from Northern Arizona University's School of 
+Informatics, Computing, and Cyber Systems. I have experience in IoT, R&D, embedded 
+& distributed systems, MCUs, circuit design, wireless sensor networks, network 
+simulation, containerization, and computational mathematics. Additional university 
+coursework, extensive interest, and open source contributions related to machine 
+learning & mathematical tooling, HPC, signal processing, digital systems, and 
+numerous branches of mathematics. 
 
-I am currently working as a Software Systems 
-Engineer for NAU's Internet of Things (IoT) team and the [DiscoverCCRI CS/EE research project](https://discoverccri.org/){:target="\_blank"}. 
-View my [CV](https://akielaries.github.io/cv/){:target="\_blank"} for more on my professional experience.
+# Some projects...
+  * [openGPMP](https://github.com/akielaries/openGPMP) - Open source, general purpose,
+  multithreaded capable mathematics package written in C++, C, Fortran, and Assembly
+  covering topics such as linear algebra, machine learning, number theory and more to
+  serve as a house of optimized mathematical based algorithms.
 
+  * [gpmlang](https://github.com/akielaries/gpmlang) - A simple interpreted language
+  built around openGPMP as a standard library for quick prototyping using Lex, Yacc,
+  and C.
 
-# Currently...
-* Projects
-  * [openGPMP](https://github.com/akielaries/openGPMP) - General purpose Open Source Mathematics Package written in C++, C and Fortran. 
-  Covers Arithmetic, Linear Algebra, Machine Learning, Number Theory, and much more. 
-  * [vpaSTRM](https://github.com/akielaries/vpaSTRM) - Lightweight Computer Vision software, written in C, inspired from
-  previous work with the DiscoverCCRI research laboratory. Video + image manipulation as well as processing using algorithms such as Fast
-  Fourier Transform, Gaussian Blur, Discrete Cosine Tranform, and many more. Currently a command line tool with future plans for a 
-  GTK-based GUI. 
-  * [piOS](https://github.com/akielaries/piOS) - Operating System for the Raspberry Pi 1, 2, 3, & 4 written in C and ARM assembly.
-  * [cppREPL](https://github.com/akielaries/cppREPL) - Simple C++ interactive shell using incremental compilation.
-  * [i2cscan](https://github.com/akielaries/i2cscan) - A simple I2C utility scanning for available I2C busses and addresses similar to i2cdetect from linux's [i2c-tools](https://git.kernel.org/pub/scm/utils/i2c-tools/i2c-tools.git/).
+  * [benchmarks](https://github.com/NAU-IoT/benchmarks) - Using C++ and CUDA, benchmarked
+  performance of NAU IoT & DiscoverCCRI's NVIDIA Jetson Nanos and Raspberry Pi Compute
+  Module IO Boards. Implemented primality test & generation, matrix arithmetic, Fibonacci
+  sequence calculations, Monte Carlo methods, and Fast Fourier Transform methods.
+
+  * [vpaSTRM](https://github.com/akielaries/vpaSTRM) - Lightweight Computer Vision
+  software, written in C, inspired from previous work with the DiscoverCCRI research
+  project. For now only features some video conversion/manipulation techniques with
+  plans for incorporating openGPMP.
+
+  * [cppREPL](https://github.com/akielaries/cppREPL) - Simple C++ interactive shell using
+  incremental compilation.
+
+  * [i2cscan](https://github.com/akielaries/i2cscan) - A simple I2C utility scanning for
+  available I2C busses and addresses similar to i2cdetect from linux's
+  [i2c-tools](https://git.kernel.org/pub/scm/utils/i2c-tools/i2c-tools.git/).
