@@ -14,7 +14,7 @@ locale                   : "en-US"
 title                    : "Akiel Aries / My Notebook"
 title_separator          : "-"
 name                     : &name "Akiel Aries"
-description              : #&description "UG Student @ NAU School of Informatics, Computing, & Cyber Systems"<wbr/>
+description              : #&description "CS Grad from NAU School of Informatics, Computing, & Cyber Systems"<wbr/>
 url                      : https://akielaries.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "akielaries.github.io"
@@ -110,7 +110,7 @@ author:
   orcid            : 
   pinterest        :
   soundcloud       :
-  stackoverflow    : "19002577/aaries"
+  stackoverflow    :
   steam            :
   tumblr           :
   twitter          : "akielaries"
