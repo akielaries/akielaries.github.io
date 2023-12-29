@@ -12,8 +12,8 @@ main:
   - title: "gpmlang"
     url: /gpmlang/
 
-  - title: "cppREPL"
-    url: /cppREPL/
+  - title: "i2cscan"
+    url: /i2cscan/
 
   - title: "benchmarks"
     url: /benchmarks/
