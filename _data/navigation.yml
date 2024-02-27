@@ -9,9 +9,6 @@ main:
   - title: "openGPMP"
     url: /openGPMP/
 
-  - title: "gpmlang"
-    url: /gpmlang/
-
   - title: "i2cscan"
     url: /i2cscan/
 
