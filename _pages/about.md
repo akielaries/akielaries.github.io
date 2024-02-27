@@ -8,13 +8,17 @@ redirect_from:
   - /about.html
 ---
 
-I am a recent Computer Science graduate from Northern Arizona University's School of 
-Informatics, Computing, and Cyber Systems. I have experience in IoT, R&D, embedded 
-& distributed systems, MCUs, circuit design, wireless sensor networks, network 
-simulation, containerization, and computational mathematics. Additional university 
-coursework, extensive interest, and open source contributions related to machine 
-learning & mathematical tooling, HPC, signal processing, digital systems, and 
-numerous branches of mathematics. 
+I am a current graduate student at the University of Colorado Boulder's College of 
+Engineering & Applied Sciences studying Electrical Engineering with an emphasis in 
+Computer Engineering/Embedded Systems and Power Electronics. I obtained my Bachelors
+in Computer Science from Northern Arizona University's School of 
+Informatics, Computing, and Cyber Systems.
+
+I have experience in IoT, R&D, embedded & distributed systems, MCUs, circuit design, 
+wireless sensor networks, network simulation, containerization, and computational 
+mathematics. Additional university coursework, extensive interest, and open source 
+contributions related to machine learning & mathematical tooling, HPC, signal 
+processing, digital systems, and numerous branches of mathematics. 
 
 # Some projects...
   * [openGPMP](https://github.com/akielaries/openGPMP) - Open source, general purpose,
