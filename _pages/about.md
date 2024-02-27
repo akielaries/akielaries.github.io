@@ -12,7 +12,7 @@ I am a current graduate student at the University of Colorado Boulder's College 
 Engineering & Applied Sciences studying Electrical Engineering with an emphasis in 
 Computer Engineering/Embedded Systems and Power Electronics. I obtained my Bachelors
 in Computer Science from Northern Arizona University's School of 
-Informatics, Computing, and Cyber Systems.
+Informatics, Computing, and Cyber Systems in December of 2023.
 
 I have experience in IoT, R&D, embedded & distributed systems, MCUs, circuit design, 
 wireless sensor networks, network simulation, containerization, and computational 
