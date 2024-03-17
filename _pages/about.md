@@ -11,8 +11,7 @@ redirect_from:
 I am a current Master's student at the University of Colorado Boulder studying 
 Electrical Engineering with an emphasis in Computer Engineering/Embedded Systems
 and Power Electronics. I obtained my Bachelor's in Computer Science from 
-Northern Arizona University's School of Informatics, Computing, and Cyber 
-Systems in December of 2023.
+Northern Arizona University in December of 2023.
 
 I have interest, experience, coursework, and open-source contributions in various areas
 such as low-voltage electronics, embedded & distributed systems, MCUs, circuit design, 
