@@ -14,7 +14,7 @@ locale                   : "en-US"
 title                    : "Akiel Aries / My Notebook"
 title_separator          : "-"
 name                     : &name "Akiel Aries"
-description              : #&description "EE Grad Student @ CU Boulder"<wbr/>
+description              : #&description "EE Master's Student @ CU Boulder"<wbr/>
 url                      : https://akielaries.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "akielaries.github.io"
