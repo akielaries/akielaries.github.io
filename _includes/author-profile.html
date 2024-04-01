@@ -78,6 +78,9 @@
       {% endif %}      
 
       <!-- Font Awesome icons / Social media -->
+      {% if author.letterboxd %}
+        <li><a href="{{ author.letterboxd }}"><i class="fab fa-fw fa-square-letterboxd" aria-hidden="true"></i>Letterboxd</a></li>
+      {% endif %}
       {% if author.bluesky %}
         <li><a href="https://bsky.app/profile/{{ author.bluesky }}"><i class="fa-solid fa-square icon-pad-right" style="color: #1184fe" aria-hidden="true"></i>Bluesky</a></li>
       {% endif %}
