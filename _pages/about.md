@@ -15,8 +15,8 @@ Northern Arizona University in 2023.
 
 I have interest, experience, coursework, and open-source contributions in various areas
 such as low-voltage electronics, embedded & distributed systems, MCUs, circuit design, 
-wireless sensor networks, network simulation & containerization, compilers & code generation,
-computational mathematics, as well as high performance & scientific computing.
+wireless sensor networks, network simulation & containerization, FPGA design, compilers & 
+code generation, computational mathematics, as well as high performance & scientific computing.
 
 Outside of my technical interests, in my free time I enjoy watching movies, TV shows, and anime.
 I also enjoy reading whether it is manga or books related to my technical interest and exploring
