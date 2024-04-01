@@ -11,12 +11,16 @@ redirect_from:
 I am a current Master's student at the University of Colorado Boulder studying 
 Electrical Engineering with an emphasis in Computer Engineering/Embedded Systems
 and Power Electronics. I obtained my Bachelor's in Computer Science from 
-Northern Arizona University in December of 2023.
+Northern Arizona University in 2023.
 
 I have interest, experience, coursework, and open-source contributions in various areas
 such as low-voltage electronics, embedded & distributed systems, MCUs, circuit design, 
 wireless sensor networks, network simulation & containerization, compilers & code generation,
 computational mathematics, as well as high performance & scientific computing.
+
+Outside of my technical interests, in my free time I enjoy watching movies, TV shows, and anime.
+I also enjoy reading whether it is manga or books related to my technical interest and exploring
+new ones.
 
 # Some projects...
   * [openGPMP](https://github.com/akielaries/openGPMP) - Open source, general purpose,
