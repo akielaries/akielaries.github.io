@@ -1,0 +1,119 @@
+---
+layout: archive
+title: "Interests & Reads"
+permalink: /interests/
+excerpt: "Interests & Reads"
+author_profile: true
+redirect_from: 
+  - /interests.html
+---
+
+During my time in undergrad studying Computer Science and Mathematics at Metropolitan       <wbr/>
+State University of Denver and then Northern Arizona University, allowed me to be introduced <wbr/>
+to a number subjects that caught my interest. Not only topics related to Computer Science and <wbr/>
+Mathematics but also Physics, Electrical Engineering, Statistics and the infinite blend of  <wbr/>
+these fields. <wbr/>
+
+For anyone interested in diving deeper into some of the topics I have developed interests   <wbr/>
+and passion for during my time in undergrad feel free to checkout the section below.        <wbr/>
+Attached are some of my personal github repos demonstrating these topics as well as my      <wbr/>
+favorite books and additional material that I use frequently.                               <wbr/>
+
+
+# Interest Areas
+<hr style="border:0.5px solid grey">
+
+## Physics and Electrical & Computer Engineering
+___
+
+
+- **General Physics**
+    * Reads:
+        * *[Computational Physics by Craig M. Savage, Henry J. Gardner](https://www.google.com/books/edition/Computational_Physics/1sdmQgAACAAJ?hl=en)*
+
+- **Computer Organization**                       <wbr/>
+    * Coursework: 
+        * *[CS 1400 - Computer Organization I](https://github.com/aba275/CS1400_Computer_Organization_I)* <wbr/>
+
+- **Circuitry**                                   <wbr/>
+
+- **Schematic and PCB design**                    <wbr/>
+    * *add repo*                                <wbr/>
+
+- **Image & Signal Processing**                   <wbr/>
+    * Reads:
+        * *[Linear Algebra for Signal Processing by Adam Bojanczyk, George Cybenko](https://www.google.com/books/edition/Linear_Algebra_for_Signal_Processing/Wz4GCAAAQBAJ?hl=en&gbpv=0)*
+        * *[Signal & Image Processing Handbook by Robert L. Libbey](https://books.google.com/books/about/Signal_And_Image_Processing_Sourcebook.html?id=DoU2CLLZ2tsC&source=kp_book_description)*             <wbr/>
+
+- **Electromagnetics**                            <wbr/>
+
+- **Hardware Programming & Embedded Systems**     <wbr/>
+    * Coursework:
+        * EE 222 - Intermediate Programming w/ C
+    * Reads:
+        * *[Embedded Hardware: Know It All by Jack Ganssle](https://www.google.com/books/edition/Embedded_Hardware_Know_It_All/HLpTtLjEXqcC?hl=en&gbpv=0)*
+
+</details>
+
+## Computer Science and Mathematics
+___
+- **Automata & Theory of Computation**
+    * Coursework:
+        * CS 315 - Automata Theory
+    * Reads:
+        * *[Introduction to the Theory of Computation by Michael Sipser](https://www.google.com/books/edition/Introduction_to_the_Theory_of_Computatio/1aMKAAAAQBAJ?hl=en&gbpv=0)*
+
+- **Data Structure & Algorithm Analysis**
+    * Coursework:
+        * *[CS 2050 - Data Structures & Algorithms](https://github.com/aba275/CS2050-Data_Structures_Algorithms)*
+        * CS 249 - Data Structures
+        * *[DSA Udemy course in C/C++](https://www.udemy.com/course/datastructurescncpp/)*
+    * Reads:
+        * *[Algorithms and Data Structures in Computer Engineering by E. Stewart Lee](https://www.google.com/books/edition/Algorithms_and_Data_Structures_in_Comput/-MxQAAAAMAAJ?hl=en&gbpv=0)*
+        * *[Data Structures and Algorithms in C by Weiss](https://www.google.com/books/edition/Data_Structures_and_Algorithm_Analysis_i/83RWbPynhkgC?hl=en)*
+        * *[Mastering Algorithms with C by Kyle Loudon](https://www.google.com/books/edition/Mastering_Algorithms_with_C/wOObAgAAQBAJ?hl=en&gbpv=0)*
+        * *[Cracking the Coding Interview by Gayle Laakmann McDowell](https://www.google.com/books/edition/Cracking_the_Coding_Interview/jD8iswEACAAJ?hl=en)*
+
+- **Parallel & High Performance Computing**
+    * Coursework:
+        * CS 450 - Parallel Programming 
+    * Reads:
+        * *[Parallel and High Performance Computing by Robert Robey, Yuliana Zamora](https://www.google.com/books/edition/Parallel_and_High_Performance_Computing/jNstEAAAQBAJ?hl=en&gbpv=0)*
+
+- **Malware Analysis & Reverse Engineering**
+    * Coursework:
+        * CYB 310 - Malware Analysis
+    * Reads:
+        * *[Practical Malware Analysis by Michael Sikorski, Andrew Honig](https://www.google.com/books/edition/Practical_Malware_Analysis/DhuTduZ-pc4C?hl=en&gbpv=0)*
+
+- **Number Theory & Cryptography**
+    * Reads:
+        * *[Number Theory by George E. Andrews](https://www.google.com/books/edition/Number_Theory/NV68AQAAQBAJ?hl=en&gbpv=0)*
+
+- **Computational Statistics, Data Science & Machine Learning**
+    * Coursework:
+        * CENE 225 - Engineering Analysis 
+        * STA 270 - Applied Statistics
+        * STA 444 - Introduction to R
+        * STA 445 - Data Wrangling & Exploration w/ R
+        * *[DS & ML Udemy course in Python](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/)*
+    * Reads:
+        * *[Practical Statistics for Data Scientists by Peter Bruce, Andrew Bruce, Peter Gedeck](https://www.google.com/books/edition/Practical_Statistics_for_Data_Scientists/xdEMywEACAAJ?hl=en)*
+
+- **Calculus & Differential Equations**
+    * Coursework:
+        * MAT 136 - Calculus I
+        * MAT 137 - Calculus II
+- **Graph Theory**
+    * Coursework: 
+        * MAT 226 - Discrete Mathematics
+            * *[Graph Theory Notes](https://learnmathonline.org/DiscreteMath/GraphTheoryIntroduction.html)*
+    * Reads:
+        * *[Graphs & Networks by Bernard Carre](https://books.google.com/books/about/Graphs_and_Networks.html?id=A-nuAAAAMAAJ)*
+
+# Currently Reading
+<hr style="border:0.5px solid grey">
+will update soon...
+
+
+
