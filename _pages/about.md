@@ -15,8 +15,8 @@ Northern Arizona University in December of 2023.
 
 I have interest, experience, coursework, and open-source contributions in various areas
 such as low-voltage electronics, embedded & distributed systems, MCUs, circuit design, 
-wireless sensor networks, network simulation, computational mathematics, as well as high 
-performance & scientific computing.
+wireless sensor networks, network simulation & containerization, compilers & code generation,
+computational mathematics, as well as high performance & scientific computing.
 
 # Some projects...
   * [openGPMP](https://github.com/akielaries/openGPMP) - Open source, general purpose,
