@@ -1,7 +1,27 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-collection: portfolio
+layout: archive
+title: "Projects"
+permalink: /portfolio/
+excerpt: "Portfolio"
+author_profile: true
+redirect_from: 
+  - /portfolio.html
 ---
+{% include base_path %}
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+## openGPMP
+* [Source Code](https://github.com/akielaries/openGPMP)
+* [Documentation](https://akielaries.github.io/openGPMP/)
+* [PyPI Package](https://pypi.org/project/pygpmp/)
+
+## i2cscan
+* [Source Code](https://github.com/akielaries/i2cscan){:target="\_blank"}
+
+## cppREPL
+* [Source Code](https://github.com/akielaries/cppREPL){:target="\_blank"}
+
+## vpaSTRM
+* [Source Code](https://github.com/akielaries/vpaSTRM){:target="\_blank"}
+
+## piOS
+* [Source Code](https://github.com/akielaries/piOS){:target="\_blank"}
