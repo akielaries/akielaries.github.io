@@ -9,8 +9,5 @@ main:
   - title: "i2cscan"
     url: /i2cscan/
 
-  - title: "benchmarks"
-    url: /benchmarks/
-
       # - title: "Guide"
       #url: /markdown/
