@@ -24,9 +24,9 @@ author:
   avatar           : "akiel_aries_avatar.png"
   name             : "Akiel Aries"
   pronouns         : # example: "she/her"  
-  bio              : "Flight Software Engineer @ Planet Labs | Master's student in Electrical Engineering @ CU Boulder"
+  bio              : "Flight Software Engineer @ Planet Labs | <br> Master's student in Electrical Engineering @ CU Boulder"
   location         : "San Francisco, CA"
-  employer         : <p><a href="https://www.planet.com/">Planet Labs</a>.</p>
+  employer         : <a href="https://www.planet.com/">Planet Labs</a>
   uri              : # URL
   email            : "akiel.aries@colorado.edu" 
 
