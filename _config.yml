@@ -26,7 +26,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Flight Software Engineer <br> @ Planet Labs <br> Master's student in Electrical Engineering @ CU Boulder"
   location         : "San Francisco, CA"
-  employer         : <a href="https://www.planet.com/">Planet Labs</a>
+  employer         : #
   uri              : # URL
   email            : "akiel.aries@colorado.edu" 
 
