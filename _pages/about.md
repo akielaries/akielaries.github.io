@@ -8,9 +8,10 @@ redirect_from:
   - /about.html
 ---
 
-I am a current Master's student at the University of Colorado Boulder studying 
-Electrical Engineering with an emphasis in Computer Engineering/Embedded Systems
-and Power Electronics. I obtained my Bachelor's in Computer Science from 
+I am a Flight Software Engineer in embedded systems at Planet Labs and a 
+current Master's student at the University of Colorado Boulder studying 
+Electrical Engineering with an emphasis in Computer Engineering
+and Power Electronics. I obtained my Bachelor's degree in Computer Science from 
 Northern Arizona University in 2023.
 
 I have interest, experience, coursework, and open-source contributions in various areas
