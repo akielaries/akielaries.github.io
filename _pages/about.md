@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Flight Software Engineer in embedded systems at Planet Labs and a 
+I am a Flight Software Engineer at Planet Labs and a 
 current Master's student at the University of Colorado Boulder studying 
 Electrical Engineering with an emphasis in Computer Engineering
 and Power Electronics. I obtained my Bachelor's degree in Computer Science from 
