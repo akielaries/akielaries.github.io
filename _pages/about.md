@@ -19,9 +19,6 @@ such as low-voltage electronics, embedded & distributed systems, MCUs, circuit d
 wireless sensor networks, network simulation & containerization, FPGA design, compilers & 
 code generation, computational mathematics, as well as high performance & scientific computing.
 
-Outside of my technical interests, in my free time I enjoy watching movies, TV shows, and anime.
-I also enjoy reading whether it is manga or books related to my technical interest and exploring
-new ones.
 
 # Some projects...
   * [openGPMP](https://github.com/akielaries/openGPMP) - Open source, general purpose,
@@ -29,8 +26,9 @@ new ones.
   covering topics such as linear algebra, machine learning, number theory and more to
   serve as a house of optimized mathematical based algorithms.
 
-  * [gpmpBLAS](https://github.com/akielaries/gpmpBLAS) - My own Basic Linear Algebra
-  Subprogram (BLAS) reference for openGPMP's Linear Algebra module.
+  * [dist-fs](https://github.com/akielaries/dist-fs) -
+A sort distributed file system/file system replacing my need for dropbox
+
 
   * [benchmarks](https://github.com/NAU-IoT/benchmarks) - Using C++ and CUDA, benchmarked
   performance of NAU IoT & DiscoverCCRI's NVIDIA Jetson Nanos and Raspberry Pi Compute
