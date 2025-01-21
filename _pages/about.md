@@ -27,7 +27,7 @@ I often spend my free time working on some projects related to the above.
   covering topics such as linear algebra, machine learning, number theory and more. I don't
   work on it much these days but is an interesting and semi-applicable project.
 
-  * [sysd](https://github.com/akielaries/sysd) - THis is a simple system daemon
+  * [sysd](https://github.com/akielaries/sysd) - This is a simple system daemon
   for monitoring the single board devices (BeagleBones RPis, Jetsons, etc.) in my home lab.
   There is a central host that has an instance of InfluxDB running with a daemon listening for
   defined telemetry packets from a given client. Using the [libinfluxdb](https://github.com/akielaries/libinfluxdb)
