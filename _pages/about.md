@@ -9,13 +9,12 @@ redirect_from:
 ---
 
 I am a Flight Software Engineer at Planet Labs working on payload firmware and hardware for electro-optical and hyperspectral satellites. I obtained my Bachelor's degree in Computer Science from 
-Northern Arizona University in 2023. Since, I have been doing post-graduate courseworkse in Electrical Engineering at the University of Colorado Boulder mostly in Computer Engineering and power
-electronics.
+Northern Arizona University in 2023 and did a some post-graduate coursework in Electrical Engineering at the University of Colorado Boulder.
 
 I have interest, experience, coursework, and open-source contributions in various areas
 such as low-voltage electronics, embedded & distributed systems, MCUs, circuit design, 
-wireless sensor networks, network simulation & containerization, FPGA design, compilers & 
-code generation, computational mathematics, high performance & scientific computing and much more.
+wireless sensor networks, network simulation & containerization, FPGA design,
+computational mathematics, and much more.
 I often spend my free time working on some projects related to the above.
 
 
