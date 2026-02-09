@@ -50,7 +50,7 @@ You will need an existing SWD programmer (e.g., an ST-Link V2 clone, another Bla
     ```bash
     meson compile -C build_bluepill
     ```
-    The resulting firmware `.bin` file will typically be found in `build_bluepill/src/firmware.bin` or similar. You might need to check the build output for the exact path.
+    The resulting firmware `.bin` file will typically be found in `build/blackmagic_bluepill_firmware.bin` or similar. You might need to check the build output for the exact path.
 
 ### Flashing the Blue Pill
 
@@ -66,9 +66,9 @@ Use a tool like `st-flash` (for ST-Link) or `openocd` to flash the generated `bl
 **Using `st-flash` (assuming ST-Link V2):**
 
 ```bash
-st-flash write path/to/blackmagic_f103rc_bl.bin 0x8000000
+st-flash --serial 18006000010000543931574E write blackmagic_bluepill_firmware.bin 0x8002000
 ```
-*(Note: The flash address `0x8000000` is common for STM32F1 devices. Verify this for your specific Blue Pill variant if you encounter issues.)*
+*(Note: The `--serial` number will vary for your specific ST-Link. The flash address `0x8002000` is consistent for these STM32F103 Blue Pill devices.)*
 
 After flashing, the Blue Pill will act as a Blackmagic Probe. You can then connect it to your target (e.g., Gowin FPGA) and follow the "Debugging with GDB-Multiarch" steps above. You might need to disconnect and reconnect the Blue Pill after flashing for it to enumerate correctly as a BMP.
 
