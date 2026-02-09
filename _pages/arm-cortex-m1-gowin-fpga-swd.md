@@ -68,7 +68,7 @@ Use a tool like `st-flash` (for ST-Link) or `openocd` to flash the generated `bl
 ```bash
 st-flash --serial 18006000010000543931574E write blackmagic_bluepill_firmware.bin 0x8002000
 ```
-*(Note: The `--serial` number will vary for your specific ST-Link. The flash address `0x8002000` is consistent for these STM32F103 Blue Pill devices.)*
+*(Note: The `--serial` number will vary for your specific ST-Link. The flash address `0x8002000` is consistent for these STM32F103 Blue Pill devices, suggesting a bootloader is likely living at `0x8000000`.)*
 
 After flashing, the Blue Pill will act as a Blackmagic Probe. You can then connect it to your target (e.g., Gowin FPGA) and follow the "Debugging with GDB-Multiarch" steps above. You might need to disconnect and reconnect the Blue Pill after flashing for it to enumerate correctly as a BMP.
 
