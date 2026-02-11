@@ -1,11 +1,29 @@
 ---
 permalink: /arm-cortex-m1-gowin-fpga-swd/
 title: "ARM Cortex M1 Gowin FPGA SWD"
-excerpt: "A tutorial on debugging the ARM Cortex M1 on Gowin FPGAs."
+excerpt: "A tutorial on debugging the ARM Cortex M1 on Gowin FPGAs with Serial Wire Debug (SWD)"
 author_profile: true
 ---
 
-This tutorial explains how to debug the ARM Cortex M1 MCU instantiated in a Gowin FPGA using Serial Wire Debug (SWD) with a Blackmagic Probe (BMP).
+This tutorial explains how to debug the ARM Cortex M1 MCU instantiated in a Gowin FPGA using Serial Wire Debug (SWD) with a Blackmagic Probe (BMP). There are some specifics in here that are not currently upstream (as of 02/10/2026. Let me explain the issue atm:
+
+The Cortex M1 instantiation on the Gowin FPGAs (or perhaps just the 60k? I haven't tested this anywhere else yet) features a different memory layout in ROM than what the blackmagicprobe debugger looks for. In short, it's not finding the proper preamble so we get messages like:
+
+```
+Switching from JTAG to dormant
+Switching from dormant to SWD
+DP DPIDR 0x2ba01477 (v1 rev2) designer 0x43b partno 0xba
+AP   0: IDR=44770001 CFG=00000000 BASE=e00ff000 CSW=a3800040 (AHB3-AP var0 rev4)
+Halt via DHCSR(01030003): success after 3ms
+ROM Table: BASE=0xe00ff000 SYSMEM=1, Manufacturer 43b Partno 470 (PIDR = 0x04002bb470)
+ 0 0x0e000e000: 0x00000000 <- does not match preamble (0xb105000d)
+ 1 0x0e0001000: 0x00000000 <- does not match preamble (0xb105000d)
+ 2 0x0e0002000: 0x00000000 <- does not match preamble (0xb105000d)
+ROM Table: END
+```
+
+
+When trying to run `mon swd` on this M1 core. To get around this I simply made some lazy changes to bypass the PIDR and CIDR register checks. It's a gross hack at best. Anyways, onto the meat of the tutorial...
 
 ## Blackmagic Probe Setup
 
