@@ -3,6 +3,9 @@ main:
   - title: "CV"
     url: /cv/
 
+  - title: "signalmesh"
+    url: https://github.com/akielaries/signalmesh
+
   - title: "openGPMP"
     url: /openGPMP/
 
