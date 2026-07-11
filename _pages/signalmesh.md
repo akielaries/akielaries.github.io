@@ -21,8 +21,38 @@ central FPGA, including the signal path and any bus/interconnect used between th
 
 ## Hardware
 
-TODO: board overview, key components, and CAD/schematics. Sources live in
+Board overview, key components, and CAD/schematics. Sources live in
 [signalmesh_CAD](https://github.com/akielaries/signalmesh_CAD){:target="\_blank"}.
+
+### Oscillator Controller (OSC_CTRL)
+
+TODO: fill in details.
+
+<figure class="half">
+  <img src="{{ base_path }}/images/signalmesh/OSC_CTRL_3d_top.png" alt="Oscillator Controller board, top render">
+  <img src="{{ base_path }}/images/signalmesh/OSC_CTRL_3d_bottom.png" alt="Oscillator Controller board, bottom render">
+  <figcaption>OSC_CTRL, top and bottom.</figcaption>
+</figure>
+
+### Audio Peripheral Module (APM v5 r1)
+
+TODO: fill in details. STM32H755 based.
+
+<figure class="half">
+  <img src="{{ base_path }}/images/signalmesh/APM_v5_r1_3d_top.png" alt="APM v5 r1 board, top render">
+  <img src="{{ base_path }}/images/signalmesh/APM_v5_r1_3d_bottom.png" alt="APM v5 r1 board, bottom render">
+  <figcaption>APM v5 r1, top and bottom.</figcaption>
+</figure>
+
+### Audio Creation Module (ACM v1 r1)
+
+TODO: fill in details. GW2AR-18 FPGA based.
+
+<figure class="half">
+  <img src="{{ base_path }}/images/signalmesh/ACM_v1_r1_3d_top.png" alt="ACM v1 r1 board, top render">
+  <img src="{{ base_path }}/images/signalmesh/ACM_v1_r1_3d_bottom.png" alt="ACM v1 r1 board, bottom render">
+  <figcaption>ACM v1 r1, top and bottom.</figcaption>
+</figure>
 
 ## Firmware
 
