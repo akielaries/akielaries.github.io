@@ -28,7 +28,7 @@ Board overview, key components, and CAD/schematics. Sources live in
 
 TODO: fill in details.
 
-<figure class="half">
+<figure>
   <img src="{{ base_path }}/images/signalmesh/OSC_CTRL_3d_top.png" alt="Oscillator Controller board, top render">
   <img src="{{ base_path }}/images/signalmesh/OSC_CTRL_3d_bottom.png" alt="Oscillator Controller board, bottom render">
   <figcaption>OSC_CTRL, top and bottom.</figcaption>
@@ -38,7 +38,7 @@ TODO: fill in details.
 
 TODO: fill in details. STM32H755 based.
 
-<figure class="half">
+<figure>
   <img src="{{ base_path }}/images/signalmesh/APM_v5_r1_3d_top.png" alt="APM v5 r1 board, top render">
   <img src="{{ base_path }}/images/signalmesh/APM_v5_r1_3d_bottom.png" alt="APM v5 r1 board, bottom render">
   <figcaption>APM v5 r1, top and bottom.</figcaption>
@@ -46,9 +46,9 @@ TODO: fill in details. STM32H755 based.
 
 ### Audio Creation Module (ACM v1 r1)
 
-TODO: fill in details. GW2AR-18 FPGA based.
+TODO: fill in details. GW5A-LV25MG121 FPGA based.
 
-<figure class="half">
+<figure>
   <img src="{{ base_path }}/images/signalmesh/ACM_v1_r1_3d_top.png" alt="ACM v1 r1 board, top render">
   <img src="{{ base_path }}/images/signalmesh/ACM_v1_r1_3d_bottom.png" alt="ACM v1 r1 board, bottom render">
   <figcaption>ACM v1 r1, top and bottom.</figcaption>
