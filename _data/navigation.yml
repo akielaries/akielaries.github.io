@@ -4,7 +4,7 @@ main:
     url: /cv/
 
   - title: "signalmesh"
-    url: https://github.com/akielaries/signalmesh
+    url: /signalmesh/
 
   - title: "openGPMP"
     url: /openGPMP/
