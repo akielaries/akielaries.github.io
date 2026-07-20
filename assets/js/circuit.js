@@ -90,7 +90,7 @@
     "Forward Wrist Rocks": "V8X-LDd8HF8",
     "Backwards Wrist Rocks": "bh5yWtpst94",
     "Side 2 Side Wrist Rocks": "k-MdBk0L6yw",
-    "ATG Squat Hold": "EK-Xn1JFeAw",
+    "ATG Squat Hold": "g6KrlrOq4mw",
     "Cossack Squat": "JaCbmoDqUc4",
     "Jefferson Curls": "YGlAdtSKQaU",
     "Hanging Scapular Shrug": "w6xP2MWfG78",
@@ -140,6 +140,10 @@
     return "https://www.youtube.com/results?search_query=" + encodeURIComponent(name + " exercise how to");
   }
 
+  // mid-video frame as the still preview; falls back to the cover thumbnail
+  function thumbUrl(id) { return "https://img.youtube.com/vi/" + id + "/2.jpg"; }
+  function thumbFallback(id) { return "https://img.youtube.com/vi/" + id + "/hqdefault.jpg"; }
+
   // speech synthesis, muted via the voice checkbox
   var canSpeak = "speechSynthesis" in window;
   function say(text, interrupt) {
@@ -162,6 +166,23 @@
     row.className = "row";
     var left = document.createElement("div");
     left.className = "left";
+    if (s[2] === "w" && VIDEOS[s[0]]) {
+      var thumb = document.createElement("img");
+      thumb.className = "cc-thumb";
+      thumb.loading = "lazy";
+      thumb.alt = s[0];
+      thumb.src = thumbUrl(VIDEOS[s[0]]);
+      thumb.dataset.fb = "0";
+      thumb.addEventListener("error", function () {
+        if (this.dataset.fb === "0") { this.dataset.fb = "1"; this.src = thumbFallback(VIDEOS[this.alt]); }
+      });
+      thumb.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var vb = li.querySelector(".cc-vidbtn");
+        toggleEmbed(li, s[0], vb);
+      });
+      left.appendChild(thumb);
+    }
     var nameSpan = document.createElement("span");
     nameSpan.className = "n";
     nameSpan.textContent = s[0];

@@ -38,9 +38,12 @@ each segment, beeps on transitions, and advances automatically.
   #cc-list li.transition { color:#6b7280; font-style:italic; }
   #cc-list li.section { font-weight:700; }
   #cc-list li .row { display:flex; justify-content:space-between; gap:.75rem; align-items:center; width:100%; }
-  #cc-list li .left { display:flex; align-items:center; gap:.5rem; min-width:0; }
-  #cc-list li .n { overflow:hidden; text-overflow:ellipsis; }
+  #cc-list li .left { display:flex; align-items:center; gap:.6rem; min-width:0; }
+  #cc-list li .n { min-width:0; }
   #cc-list li .right { display:flex; align-items:center; gap:.5rem; flex:none; }
+  .cc-thumb { width:104px; height:60px; object-fit:cover; border-radius:6px; cursor:pointer;
+    background:#e5e7eb; flex:none; display:block; }
+  .cc-thumb:hover { outline:2px solid #ef4444; }
   .cc-vidbtn { border:1px solid #d1d5db; background:#f9fafb; border-radius:6px; padding:.1rem .45rem;
     font-size:.75rem; line-height:1.4; cursor:pointer; color:#374151; }
   .cc-vidbtn:hover { background:#f0f0f0; }
@@ -69,7 +72,7 @@ each segment, beeps on transitions, and advances automatically.
   </div>
   <div id="cc-opts">
     <label><input type="checkbox" id="cc-voice" checked> Voice cues</label>
-    <span style="opacity:.6">Tap a name to see a demo video.</span>
+    <span style="opacity:.6">Each exercise shows a picture; tap it (or "video") to play a demo.</span>
   </div>
   <div id="cc-list"><ol></ol></div>
 </div>
