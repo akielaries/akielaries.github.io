@@ -1,129 +1,77 @@
 (function () {
-  // w = work, t = transition, s = section marker
-  var SEQ = [
-    ["Cat Cow", 60, "w"],
-    ["Transitioning To Pelvic Tilts", 7, "t"],
-    ["Pelvic Tilts", 60, "w"],
-    ["Thoracic Mobility Work", 15, "s"],
-    ["Thread The Needle", 60, "w"],
-    ["Transitioning To Open Books", 7, "t"],
-    ["Open Books", 60, "w"],
-    ["Grab Foam Roller", 7, "t"],
-    ["Thoracic Extension w/ Foam Roller", 60, "w"],
-    ["Transitioning To Thoracic CARs", 7, "t"],
-    ["Thoracic CARs Each Direction (slow)", 60, "w"],
-    ["Hip Work", 15, "s"],
-    ["90s / 90s", 90, "w"],
-    ["Transitioning To Hip CARs", 7, "t"],
-    ["Hip CARs Each Direction", 60, "w"],
-    ["Transitioning To WGS", 7, "t"],
-    ["Worlds Greatest Stretch", 60, "w"],
-    ["Transitioning To Deep Squats", 7, "t"],
-    ["Deep Squat Holds (explore)", 60, "w"],
-    ["Transitioning To Couch Stretch", 15, "t"],
-    ["Couch Stretch", 60, "w"],
-    ["Limb Stability Work", 20, "s"],
-    ["Shoulder CARs", 60, "w"],
-    ["Transitioning To Push-Up Form", 7, "t"],
-    ["Scapular Push ups", 45, "w"],
-    ["Grab Resistance Band", 7, "t"],
-    ["Band Pull Aparts", 60, "w"],
-    ["Wrap Band To The Bar", 15, "t"],
-    ["External Rotation", 60, "w"],
-    ["Transitioning To Wrist Work", 7, "t"],
-    ["Wrist CARs", 40, "w"],
-    ["Wrist Rocks", 7, "t"],
-    ["Forward Wrist Rocks", 30, "w"],
-    ["Backwards", 7, "t"],
-    ["Backwards Wrist Rocks", 30, "w"],
-    ["Side 2 Side", 7, "t"],
-    ["Side 2 Side Wrist Rocks", 30, "w"],
-    ["End-Range Strength Training", 15, "s"],
-    ["ATG Squat Hold", 60, "w"],
-    ["Transitioning To Cossack Squat", 7, "t"],
-    ["Cossack Squat", 60, "w"],
-    ["Transitioning To Box For Jefferson Curls", 7, "t"],
-    ["Jefferson Curls", 60, "w"],
-    ["Transitioning To Pull Up Bar", 7, "t"],
-    ["Hanging Scapular Shrug", 30, "w"],
-    ["Tendon Health Work", 15, "s"],
-    ["Spanish Squats", 60, "w"],
-    ["Transitioning To A Wall", 7, "t"],
-    ["Tibialis Raises", 45, "w"],
-    ["Transitioning To Calf Raises", 7, "t"],
-    ["Standing Calf Raises", 45, "w"],
-    ["Single Leg Calf Raises", 40, "w"],
-    ["Transitioning To Wrist Strength Training", 7, "t"],
-    ["Wrist Flexor/Extensor Strength", 60, "w"],
-    ["Grab A Rubber Band", 7, "t"],
-    ["Finger Extensions", 60, "w"],
-    ["Equilibrium Work", 15, "s"],
-    ["Single Leg Balance", 60, "w"],
-    ["Eyes Closed", 7, "t"],
-    ["Eyes Closed Single Leg Balance", 40, "w"],
-    ["Transitioning To A Seat", 7, "t"],
-    ["Short Foot Exercise", 60, "w"],
-    ["Toe Yoga", 30, "w"],
-    ["Dumbbell To the Living Room", 15, "t"],
-    ["Farmer Carry", 45, "w"]
+  // one-line plain descriptions so you always know the move
+  var DESC = {
+    "Cat Cow": "On all fours; alternate arching your back up and letting it drop, moving with your breath.",
+    "Pelvic Tilts": "On your back, knees bent; rock your pelvis to flatten then arch your lower back.",
+    "Thread the Needle": "On all fours; reach one arm under the other and rotate your upper back, then switch.",
+    "Banded Side Steps": "Band around your legs; stay in a half-squat and step side to side.",
+    "Banded Monster Walks": "Band around your legs; walk forward and back in a partial squat, keeping tension.",
+    "Leg Swings (front to back)": "Hold a wall or door; swing one leg forward and back, then switch legs halfway.",
+    "Standing Hip Circles": "Hold a support; lift one knee and draw big circles with the hip, switch legs halfway.",
+    "Bodyweight Squats": "Feet shoulder-width; sit back and down until thighs near parallel, then stand tall.",
+    "Reverse Lunges": "Step one foot back and lower until both knees bend about 90 degrees; alternate legs.",
+    "Calf Raises": "Rise up onto the balls of your feet, then lower slowly. Hold a wall if you need balance.",
+    "Glute Bridges": "On your back, knees bent; drive your hips up squeezing your glutes, then lower.",
+    "Push-ups": "Hands under shoulders; lower your chest toward the floor and press up. Drop to knees if needed.",
+    "Mountain Climbers": "In a plank, quickly drive your knees toward your chest one at a time.",
+    "High Knees": "Run in place, driving your knees up high and pumping your arms.",
+    "Plank": "Forearms and toes down; hold a straight line from head to heels, brace your core.",
+    "Jumping Jacks": "Jump your feet out while raising your arms overhead, then back in.",
+    "Child's Pose": "Kneel and sit back onto your heels, reaching your arms forward on the floor. Breathe.",
+    "Standing Forward Fold": "Hinge at the hips and hang toward your toes, letting your neck relax.",
+    "Quad Stretch": "Stand tall, pull one heel toward your glute; hold, then switch. Hold a wall for balance."
+  };
+
+  function W(name, secs) { return { name: name, secs: secs, kind: "w" }; }
+  function R(secs) { return { name: "Rest", secs: secs, kind: "r" }; }
+
+  // build the full sequence: warm-up, 3 rounds, cool-down
+  var SEQ = [];
+  function push(items, section) {
+    items.forEach(function (it) { it.section = section; SEQ.push(it); });
+  }
+
+  push([
+    W("Cat Cow", 60),
+    W("Pelvic Tilts", 45),
+    W("Thread the Needle", 60),
+    W("Banded Side Steps", 45),
+    W("Banded Monster Walks", 45),
+    W("Leg Swings (front to back)", 60),
+    W("Standing Hip Circles", 45)
+  ], "Warm-up");
+
+  var round = [
+    W("Bodyweight Squats", 45),
+    W("Reverse Lunges", 45),
+    W("Calf Raises", 40),
+    W("Glute Bridges", 40),
+    W("Push-ups", 30),
+    W("Mountain Climbers", 40),
+    W("High Knees", 40),
+    W("Plank", 40),
+    W("Jumping Jacks", 40)
   ];
+  for (var r = 1; r <= 3; r++) {
+    var items = [];
+    round.forEach(function (ex, i) {
+      items.push(W(ex.name, ex.secs));
+      if (i < round.length - 1) { items.push(R(15)); }
+    });
+    if (r < 3) { items.push(R(45)); }
+    push(items, "Round " + r + " of 3");
+  }
 
-  // exercise -> youtube video id for a demo clip (all verified live)
-  var VIDEOS = {
-    "Cat Cow": "MgDn34q4Hm8",
-    "Pelvic Tilts": "JPaiq9wd7ko",
-    "Thread The Needle": "oAQ_qycUj5o",
-    "Open Books": "rDviWORCWEw",
-    "Thoracic Extension w/ Foam Roller": "ulcHUrE37Kw",
-    "Thoracic CARs Each Direction (slow)": "2lCochWaW9A",
-    "90s / 90s": "_rzJ1RXhM90",
-    "Hip CARs Each Direction": "PwxO_Zn4hI4",
-    "Worlds Greatest Stretch": "-CiWQ2IvY34",
-    "Deep Squat Holds (explore)": "0wzrgyAurT8",
-    "Couch Stretch": "-rsIS-wl-ig",
-    "Shoulder CARs": "2hyNG1U5wYs",
-    "Scapular Push ups": "LeMk15TN0No",
-    "Band Pull Aparts": "smSSXITNpCI",
-    "External Rotation": "_UvmPNGtlPM",
-    "Wrist CARs": "KdM1KlmVgek",
-    "Forward Wrist Rocks": "V8X-LDd8HF8",
-    "Backwards Wrist Rocks": "bh5yWtpst94",
-    "Side 2 Side Wrist Rocks": "k-MdBk0L6yw",
-    "ATG Squat Hold": "g6KrlrOq4mw",
-    "Cossack Squat": "JaCbmoDqUc4",
-    "Jefferson Curls": "YGlAdtSKQaU",
-    "Hanging Scapular Shrug": "w6xP2MWfG78",
-    "Spanish Squats": "3igyh6eqGvc",
-    "Tibialis Raises": "mmLnKYwdDMM",
-    "Standing Calf Raises": "EmyjIRHl3CU",
-    "Single Leg Calf Raises": "u1Yc75YdiJA",
-    "Wrist Flexor/Extensor Strength": "eOYwu-dHAD4",
-    "Finger Extensions": "rbV3rOvKUZM",
-    "Single Leg Balance": "Dtgh2_LFkBQ",
-    "Eyes Closed Single Leg Balance": "4HtOeds_vyw",
-    "Short Foot Exercise": "m1lkcg8p-48",
-    "Toe Yoga": "QkrwfbtUzyU",
-    "Farmer Carry": "lLAw6fUccKA"
-  };
+  push([
+    W("Child's Pose", 45),
+    W("Standing Forward Fold", 45),
+    W("Quad Stretch", 60)
+  ], "Cool-down");
 
-  // exercise -> free-exercise-db folder (real start/end position photos)
-  var PHOTO_BASE = "https://cdn.jsdelivr.net/gh/yuhonas/free-exercise-db@main/exercises/";
-  var PHOTOS = {
-    "Cat Cow": "Cat_Stretch",
-    "Pelvic Tilts": "Pelvic_Tilt_Into_Bridge",
-    "Deep Squat Holds (explore)": "Bodyweight_Squat",
-    "Band Pull Aparts": "Band_Pull_Apart",
-    "External Rotation": "External_Rotation_with_Band",
-    "Standing Calf Raises": "Standing_Calf_Raises",
-    "Farmer Carry": "Farmers_Walk"
-  };
-  function photoUrl(name, n) { return PHOTO_BASE + PHOTOS[name] + "/" + n + ".jpg"; }
+  var KIND = { w: "Work", r: "Rest" };
 
-  var KIND = { w: "Work", t: "Transition", s: "Section" };
-  var COLOR = { w: "var(--work)", t: "var(--trans)", s: "var(--sect)" };
-
-  var idx = 0, remaining = SEQ[0][1], running = false, tickId = null, wakeLock = null;
-  var totalSecs = SEQ.reduce(function (a, s) { return a + s[1]; }, 0);
+  var idx = 0, remaining = SEQ[0].secs, running = false, tickId = null, wakeLock = null;
+  var totalSecs = SEQ.reduce(function (a, s) { return a + s.secs; }, 0);
 
   var el = {
     stage: document.getElementById("cc-stage"),
@@ -138,13 +86,7 @@
     skip: document.getElementById("cc-skip"),
     reset: document.getElementById("cc-reset"),
     voice: document.getElementById("cc-voice"),
-    list: document.querySelector("#cc-list ol"),
-    modal: document.getElementById("cc-modal"),
-    mtitle: document.getElementById("cc-mtitle"),
-    msub: document.getElementById("cc-msub"),
-    mbody: document.getElementById("cc-mbody"),
-    yt: document.getElementById("cc-yt"),
-    close: document.getElementById("cc-close")
+    list: document.querySelector("#cc-list ol")
   };
 
   if (!el.start) { return; }
@@ -153,12 +95,10 @@
     var m = Math.floor(s / 60), r = s % 60;
     return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r;
   }
-
   function ytSearch(name) {
-    return "https://www.youtube.com/results?search_query=" + encodeURIComponent(name + " exercise how to");
+    return "https://www.youtube.com/results?search_query=" + encodeURIComponent("how to " + name + " exercise");
   }
 
-  // speech synthesis, muted via the voice checkbox
   var canSpeak = "speechSynthesis" in window;
   function say(text, interrupt) {
     if (!canSpeak || !el.voice.checked) { return; }
@@ -170,105 +110,53 @@
     } catch (e) {}
   }
 
-  // build the list; work rows are tappable and open the detail sheet
+  // build the list, grouped by section, with a description on every move
+  var lastSection = null;
   SEQ.forEach(function (s, i) {
+    if (s.section !== lastSection) {
+      lastSection = s.section;
+      var h = document.createElement("li");
+      h.className = "sec";
+      h.textContent = s.section;
+      el.list.appendChild(h);
+    }
     var li = document.createElement("li");
-    li.className = s[2] === "t" ? "transition" : s[2] === "s" ? "section" : "work";
+    li.className = s.kind === "r" ? "rest" : "work";
     li.dataset.i = i;
-
-    if (s[2] === "w") {
-      var thumb;
-      if (PHOTOS[s[0]]) {
-        thumb = document.createElement("img");
-        thumb.className = "thumb";
-        thumb.loading = "lazy";
-        thumb.alt = s[0];
-        thumb.src = photoUrl(s[0], 0);
-      } else {
-        thumb = document.createElement("span");
-        thumb.className = "thumb ph";
-        thumb.textContent = VIDEOS[s[0]] ? "▶" : "·";
+    if (s.kind === "r") {
+      li.innerHTML = '<span class="rlabel">Rest</span><span class="d"></span>';
+      li.querySelector(".d").textContent = fmt(s.secs);
+    } else {
+      var head = document.createElement("div");
+      head.className = "head";
+      var n = document.createElement("span");
+      n.className = "n";
+      n.textContent = s.name;
+      var d = document.createElement("span");
+      d.className = "d";
+      d.textContent = fmt(s.secs);
+      head.appendChild(n);
+      head.appendChild(d);
+      li.appendChild(head);
+      if (DESC[s.name]) {
+        var p = document.createElement("div");
+        p.className = "desc";
+        p.textContent = DESC[s.name];
+        li.appendChild(p);
       }
-      li.appendChild(thumb);
+      var a = document.createElement("a");
+      a.className = "demo";
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.href = ytSearch(s.name);
+      a.textContent = "watch demo";
+      li.appendChild(a);
     }
-
-    var n = document.createElement("span");
-    n.className = "n";
-    n.textContent = s[0];
-    li.appendChild(n);
-
-    var d = document.createElement("span");
-    d.className = "d";
-    d.textContent = fmt(s[1]);
-    li.appendChild(d);
-
-    if (s[2] === "w") {
-      var go = document.createElement("span");
-      go.className = "go";
-      go.textContent = "›";
-      li.appendChild(go);
-      li.addEventListener("click", function () { openDetail(s[0]); });
-    }
-
     el.list.appendChild(li);
   });
-  var liEls = el.list.querySelectorAll("li");
+  var rowFor = {};
+  el.list.querySelectorAll("li[data-i]").forEach(function (li) { rowFor[li.dataset.i] = li; });
 
-  // detail sheet: big photos + inline video, plays inside the page
-  function openDetail(name) {
-    el.mtitle.textContent = name;
-    el.msub.textContent = PHOTOS[name] ? "Start and end position, plus a demo." : "Demo video.";
-    el.yt.href = ytSearch(name);
-    el.mbody.innerHTML = "";
-
-    if (PHOTOS[name]) {
-      var wrap = document.createElement("div");
-      wrap.id = "cc-photos";
-      [["0", "start"], ["1", "end"]].forEach(function (p) {
-        var fig = document.createElement("figure");
-        var img = document.createElement("img");
-        img.src = photoUrl(name, p[0]);
-        img.alt = name + " " + p[1];
-        var cap = document.createElement("figcaption");
-        cap.textContent = p[1];
-        fig.appendChild(img);
-        fig.appendChild(cap);
-        wrap.appendChild(fig);
-      });
-      el.mbody.appendChild(wrap);
-    }
-
-    var vid = VIDEOS[name];
-    if (vid) {
-      var iframe = document.createElement("iframe");
-      iframe.id = "cc-video";
-      iframe.src = "https://www.youtube-nocookie.com/embed/" + vid + "?playsinline=1&rel=0";
-      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-      iframe.allowFullscreen = true;
-      el.mbody.appendChild(iframe);
-    } else if (!PHOTOS[name]) {
-      var p = document.createElement("div");
-      p.className = "nomedia";
-      p.textContent = "No demo saved for this one — use the search button below.";
-      el.mbody.appendChild(p);
-    }
-
-    el.modal.classList.add("open");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeDetail() {
-    el.modal.classList.remove("open");
-    el.mbody.innerHTML = "";  // unloads the iframe so audio stops
-    document.body.style.overflow = "";
-  }
-
-  el.close.addEventListener("click", closeDetail);
-  el.modal.addEventListener("click", function (e) {
-    if (e.target === el.modal) { closeDetail(); }
-  });
-
-  // web audio beep, no assets needed
   var ac = null;
   function beep(freq, dur) {
     try {
@@ -285,54 +173,49 @@
 
   function elapsedBefore(i) {
     var t = 0;
-    for (var k = 0; k < i; k++) { t += SEQ[k][1]; }
+    for (var k = 0; k < i; k++) { t += SEQ[k].secs; }
     return t;
   }
-
-  // cleaned-up spoken form for the announcer
-  function spoken(name) {
-    return name
-      .replace("w/", "with")
-      .replace("CARs", "cars")
-      .replace("90s / 90s", "nineties")
-      .replace("WGS", "world's greatest stretch")
-      .replace("2", "to");
+  function nextWork(i) {
+    for (var k = i + 1; k < SEQ.length; k++) { if (SEQ[k].kind === "w") { return SEQ[k]; } }
+    return null;
   }
-
   function announceCurrent() {
     var s = SEQ[idx];
-    if (s[2] === "t") {
-      var nx = SEQ[idx + 1];
-      say(nx ? "Next up, " + spoken(nx[0]) : "Last one", true);
+    if (s.kind === "r") {
+      var nx = nextWork(idx);
+      say(nx ? "Next, " + nx.name : "Almost done", true);
     } else {
-      say(spoken(s[0]), true);
+      say(s.name, true);
     }
   }
 
   function render() {
     var s = SEQ[idx];
-    el.kind.textContent = KIND[s[2]];
-    el.name.textContent = s[0];
+    el.kind.textContent = s.kind === "r" ? "Rest" : s.section;
+    el.name.textContent = s.name;
     el.time.textContent = fmt(remaining);
-    el.stage.className = s[2] === "t" ? "trans" : "";
-    el.bar.style.background = COLOR[s[2]];
-    el.bar.style.width = (100 * (s[1] - remaining) / s[1]) + "%";
+    el.stage.className = s.kind === "r" ? "trans" : "";
+    el.bar.style.background = s.kind === "r" ? "#9ca3af" : "#22d3a6";
+    el.bar.style.width = (100 * (s.secs - remaining) / s.secs) + "%";
     var nx = SEQ[idx + 1];
-    el.next.textContent = nx ? "Next: " + nx[0] + "  (" + fmt(nx[1]) + ")" : "Last one";
-    var doneSecs = elapsedBefore(idx) + (s[1] - remaining);
+    el.next.textContent = nx ? "Next: " + nx.name + "  (" + fmt(nx.secs) + ")" : "Last one";
+    var doneSecs = elapsedBefore(idx) + (s.secs - remaining);
     el.total.textContent = fmt(doneSecs) + " / " + fmt(totalSecs)
       + "   -   step " + (idx + 1) + " of " + SEQ.length;
-    for (var i = 0; i < liEls.length; i++) {
-      liEls[i].classList.toggle("active", i === idx);
-      liEls[i].classList.toggle("done", i < idx);
+    for (var i = 0; i < SEQ.length; i++) {
+      var li = rowFor[i];
+      if (!li) { continue; }
+      li.classList.toggle("active", i === idx);
+      li.classList.toggle("done", i < idx);
     }
   }
 
   function advance() {
     if (idx < SEQ.length - 1) {
       idx++;
-      remaining = SEQ[idx][1];
-      beep(SEQ[idx][2] === "t" ? 660 : 880, 0.18);
+      remaining = SEQ[idx].secs;
+      beep(SEQ[idx].kind === "r" ? 660 : 880, 0.18);
       announceCurrent();
       render();
     } else {
@@ -344,9 +227,9 @@
     stop();
     beep(988, 0.25);
     setTimeout(function () { beep(1319, 0.35); }, 200);
-    say("Circuit complete. Nice work.", true);
+    say("Workout complete. Nice work.", true);
     el.kind.textContent = "Done";
-    el.name.textContent = "Circuit complete";
+    el.name.textContent = "Workout complete";
     el.time.textContent = fmt(totalSecs);
     el.next.textContent = "Nice work.";
     el.start.textContent = "Start";
@@ -389,17 +272,15 @@
     el.start.classList.add("running");
     el.pause.textContent = "Pause";
   }
-
   function stop() {
     running = false;
     if (tickId) { clearInterval(tickId); tickId = null; }
     releaseWake();
   }
-
   function reset() {
     stop();
     if (canSpeak) { window.speechSynthesis.cancel(); }
-    idx = 0; remaining = SEQ[0][1];
+    idx = 0; remaining = SEQ[0].secs;
     el.start.textContent = "Start";
     el.start.classList.remove("running");
     el.pause.textContent = "Pause";
@@ -408,7 +289,6 @@
 
   el.start.addEventListener("click", function () {
     if (!ac) { beep(0.001, 0.001); }
-    // prime speech inside the user gesture so ios lets it talk later
     if (canSpeak && el.voice.checked) { say(" ", true); }
     if (running) {
       stop();
