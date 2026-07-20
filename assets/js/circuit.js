@@ -68,8 +68,7 @@
     ["Farmer Carry", 45, "w"]
   ];
 
-  // exercise name -> youtube video id for a demo clip
-  // an empty/missing id falls back to a youtube search link
+  // exercise -> youtube video id for a demo clip (all verified live)
   var VIDEOS = {
     "Cat Cow": "MgDn34q4Hm8",
     "Pelvic Tilts": "JPaiq9wd7ko",
@@ -107,6 +106,19 @@
     "Farmer Carry": "lLAw6fUccKA"
   };
 
+  // exercise -> free-exercise-db folder (real start/end position photos)
+  var PHOTO_BASE = "https://cdn.jsdelivr.net/gh/yuhonas/free-exercise-db@main/exercises/";
+  var PHOTOS = {
+    "Cat Cow": "Cat_Stretch",
+    "Pelvic Tilts": "Pelvic_Tilt_Into_Bridge",
+    "Deep Squat Holds (explore)": "Bodyweight_Squat",
+    "Band Pull Aparts": "Band_Pull_Apart",
+    "External Rotation": "External_Rotation_with_Band",
+    "Standing Calf Raises": "Standing_Calf_Raises",
+    "Farmer Carry": "Farmers_Walk"
+  };
+  function photoUrl(name, n) { return PHOTO_BASE + PHOTOS[name] + "/" + n + ".jpg"; }
+
   var KIND = { w: "Work", t: "Transition", s: "Section" };
   var COLOR = { w: "var(--work)", t: "var(--trans)", s: "var(--sect)" };
 
@@ -126,7 +138,13 @@
     skip: document.getElementById("cc-skip"),
     reset: document.getElementById("cc-reset"),
     voice: document.getElementById("cc-voice"),
-    list: document.querySelector("#cc-list ol")
+    list: document.querySelector("#cc-list ol"),
+    modal: document.getElementById("cc-modal"),
+    mtitle: document.getElementById("cc-mtitle"),
+    msub: document.getElementById("cc-msub"),
+    mbody: document.getElementById("cc-mbody"),
+    yt: document.getElementById("cc-yt"),
+    close: document.getElementById("cc-close")
   };
 
   if (!el.start) { return; }
@@ -140,10 +158,6 @@
     return "https://www.youtube.com/results?search_query=" + encodeURIComponent(name + " exercise how to");
   }
 
-  // mid-video frame as the still preview; falls back to the cover thumbnail
-  function thumbUrl(id) { return "https://img.youtube.com/vi/" + id + "/2.jpg"; }
-  function thumbFallback(id) { return "https://img.youtube.com/vi/" + id + "/hqdefault.jpg"; }
-
   // speech synthesis, muted via the voice checkbox
   var canSpeak = "speechSynthesis" in window;
   function say(text, interrupt) {
@@ -156,86 +170,103 @@
     } catch (e) {}
   }
 
-  // build the exercise list, each work/section row expands to a demo video
+  // build the list; work rows are tappable and open the detail sheet
   SEQ.forEach(function (s, i) {
     var li = document.createElement("li");
-    li.className = s[2] === "t" ? "transition" : s[2] === "s" ? "section" : "";
+    li.className = s[2] === "t" ? "transition" : s[2] === "s" ? "section" : "work";
     li.dataset.i = i;
 
-    var row = document.createElement("div");
-    row.className = "row";
-    var left = document.createElement("div");
-    left.className = "left";
-    if (s[2] === "w" && VIDEOS[s[0]]) {
-      var thumb = document.createElement("img");
-      thumb.className = "cc-thumb";
-      thumb.loading = "lazy";
-      thumb.alt = s[0];
-      thumb.src = thumbUrl(VIDEOS[s[0]]);
-      thumb.dataset.fb = "0";
-      thumb.addEventListener("error", function () {
-        if (this.dataset.fb === "0") { this.dataset.fb = "1"; this.src = thumbFallback(VIDEOS[this.alt]); }
-      });
-      thumb.addEventListener("click", function (e) {
-        e.stopPropagation();
-        var vb = li.querySelector(".cc-vidbtn");
-        toggleEmbed(li, s[0], vb);
-      });
-      left.appendChild(thumb);
-    }
-    var nameSpan = document.createElement("span");
-    nameSpan.className = "n";
-    nameSpan.textContent = s[0];
-    left.appendChild(nameSpan);
-    var right = document.createElement("div");
-    right.className = "right";
     if (s[2] === "w") {
-      var vb = document.createElement("button");
-      vb.className = "cc-vidbtn";
-      vb.type = "button";
-      vb.textContent = "video";
-      right.appendChild(vb);
+      var thumb;
+      if (PHOTOS[s[0]]) {
+        thumb = document.createElement("img");
+        thumb.className = "thumb";
+        thumb.loading = "lazy";
+        thumb.alt = s[0];
+        thumb.src = photoUrl(s[0], 0);
+      } else {
+        thumb = document.createElement("span");
+        thumb.className = "thumb ph";
+        thumb.textContent = VIDEOS[s[0]] ? "▶" : "·";
+      }
+      li.appendChild(thumb);
     }
+
+    var n = document.createElement("span");
+    n.className = "n";
+    n.textContent = s[0];
+    li.appendChild(n);
+
     var d = document.createElement("span");
     d.className = "d";
     d.textContent = fmt(s[1]);
-    right.appendChild(d);
-    row.appendChild(left);
-    row.appendChild(right);
-    li.appendChild(row);
-    el.list.appendChild(li);
+    li.appendChild(d);
 
     if (s[2] === "w") {
-      right.querySelector(".cc-vidbtn").addEventListener("click", function (e) {
-        e.stopPropagation();
-        toggleEmbed(li, s[0], this);
-      });
+      var go = document.createElement("span");
+      go.className = "go";
+      go.textContent = "›";
+      li.appendChild(go);
+      li.addEventListener("click", function () { openDetail(s[0]); });
     }
+
+    el.list.appendChild(li);
   });
   var liEls = el.list.querySelectorAll("li");
 
-  function toggleEmbed(li, name, btn) {
-    var existing = li.querySelector(".cc-embed");
-    if (existing) { existing.remove(); btn.textContent = "video"; return; }
-    btn.textContent = "hide";
-    var box = document.createElement("div");
-    box.className = "cc-embed";
-    var id = VIDEOS[name];
-    if (id) {
+  // detail sheet: big photos + inline video, plays inside the page
+  function openDetail(name) {
+    el.mtitle.textContent = name;
+    el.msub.textContent = PHOTOS[name] ? "Start and end position, plus a demo." : "Demo video.";
+    el.yt.href = ytSearch(name);
+    el.mbody.innerHTML = "";
+
+    if (PHOTOS[name]) {
+      var wrap = document.createElement("div");
+      wrap.id = "cc-photos";
+      [["0", "start"], ["1", "end"]].forEach(function (p) {
+        var fig = document.createElement("figure");
+        var img = document.createElement("img");
+        img.src = photoUrl(name, p[0]);
+        img.alt = name + " " + p[1];
+        var cap = document.createElement("figcaption");
+        cap.textContent = p[1];
+        fig.appendChild(img);
+        fig.appendChild(cap);
+        wrap.appendChild(fig);
+      });
+      el.mbody.appendChild(wrap);
+    }
+
+    var vid = VIDEOS[name];
+    if (vid) {
       var iframe = document.createElement("iframe");
-      iframe.src = "https://www.youtube-nocookie.com/embed/" + id;
+      iframe.id = "cc-video";
+      iframe.src = "https://www.youtube-nocookie.com/embed/" + vid + "?playsinline=1&rel=0";
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
       iframe.allowFullscreen = true;
-      iframe.loading = "lazy";
-      box.appendChild(iframe);
+      el.mbody.appendChild(iframe);
+    } else if (!PHOTOS[name]) {
+      var p = document.createElement("div");
+      p.className = "nomedia";
+      p.textContent = "No demo saved for this one — use the search button below.";
+      el.mbody.appendChild(p);
     }
-    var link = document.createElement("div");
-    link.innerHTML = (id ? "" : '<span class="miss">No demo saved. </span>')
-      + '<a target="_blank" rel="noopener" href="' + ytSearch(name) + '">'
-      + (id ? "wrong video? search YouTube" : "search YouTube") + "</a>";
-    box.appendChild(link);
-    li.appendChild(box);
+
+    el.modal.classList.add("open");
+    document.body.style.overflow = "hidden";
   }
+
+  function closeDetail() {
+    el.modal.classList.remove("open");
+    el.mbody.innerHTML = "";  // unloads the iframe so audio stops
+    document.body.style.overflow = "";
+  }
+
+  el.close.addEventListener("click", closeDetail);
+  el.modal.addEventListener("click", function (e) {
+    if (e.target === el.modal) { closeDetail(); }
+  });
 
   // web audio beep, no assets needed
   var ac = null;
@@ -258,7 +289,7 @@
     return t;
   }
 
-  // spoken name for a segment, cleaned up for the announcer
+  // cleaned-up spoken form for the announcer
   function spoken(name) {
     return name
       .replace("w/", "with")
@@ -295,8 +326,6 @@
       liEls[i].classList.toggle("active", i === idx);
       liEls[i].classList.toggle("done", i < idx);
     }
-    var active = liEls[idx];
-    if (active) { active.scrollIntoView({ block: "nearest" }); }
   }
 
   function advance() {
@@ -379,7 +408,7 @@
 
   el.start.addEventListener("click", function () {
     if (!ac) { beep(0.001, 0.001); }
-    // prime the speech engine inside the user gesture so ios lets it talk later
+    // prime speech inside the user gesture so ios lets it talk later
     if (canSpeak && el.voice.checked) { say(" ", true); }
     if (running) {
       stop();
@@ -403,7 +432,6 @@
   el.skip.addEventListener("click", function () { advance(); });
   el.reset.addEventListener("click", reset);
 
-  // re-acquire wake lock when tab refocuses
   document.addEventListener("visibilitychange", function () {
     if (document.visibilityState === "visible" && running) { requestWake(); }
   });
