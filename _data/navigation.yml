@@ -15,5 +15,8 @@ main:
   - title: "Tutorials"
     url: /tutorials/
 
+  - title: "Circuit"
+    url: /circuit/
+
       # - title: "Guide"
       #url: /markdown/
