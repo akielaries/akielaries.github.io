@@ -37,6 +37,19 @@ each segment, beeps on transitions, and advances automatically.
   #cc-list li .d { font-variant-numeric:tabular-nums; opacity:.7; }
   #cc-list li.transition { color:#6b7280; font-style:italic; }
   #cc-list li.section { font-weight:700; }
+  #cc-list li .row { display:flex; justify-content:space-between; gap:.75rem; align-items:center; width:100%; }
+  #cc-list li .left { display:flex; align-items:center; gap:.5rem; min-width:0; }
+  #cc-list li .n { overflow:hidden; text-overflow:ellipsis; }
+  #cc-list li .right { display:flex; align-items:center; gap:.5rem; flex:none; }
+  .cc-vidbtn { border:1px solid #d1d5db; background:#f9fafb; border-radius:6px; padding:.1rem .45rem;
+    font-size:.75rem; line-height:1.4; cursor:pointer; color:#374151; }
+  .cc-vidbtn:hover { background:#f0f0f0; }
+  .cc-embed { width:100%; margin:.6rem 0 .2rem; }
+  .cc-embed iframe { width:100%; aspect-ratio:16/9; border:0; border-radius:8px; }
+  .cc-embed .miss { font-size:.85rem; }
+  .cc-embed a { font-size:.78rem; }
+  #cc-opts { display:flex; gap:1rem; align-items:center; margin-top:.75rem; font-size:.9rem; flex-wrap:wrap; }
+  #cc-opts label { display:flex; align-items:center; gap:.35rem; cursor:pointer; }
 </style>
 
 <div id="circuit">
@@ -53,6 +66,10 @@ each segment, beeps on transitions, and advances automatically.
     <button id="cc-pause">Pause</button>
     <button id="cc-skip">Skip</button>
     <button id="cc-reset">Reset</button>
+  </div>
+  <div id="cc-opts">
+    <label><input type="checkbox" id="cc-voice" checked> Voice cues</label>
+    <span style="opacity:.6">Tap a name to see a demo video.</span>
   </div>
   <div id="cc-list"><ol></ol></div>
 </div>

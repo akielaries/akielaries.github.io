@@ -68,6 +68,45 @@
     ["Farmer Carry", 45, "w"]
   ];
 
+  // exercise name -> youtube video id for a demo clip
+  // an empty/missing id falls back to a youtube search link
+  var VIDEOS = {
+    "Cat Cow": "MgDn34q4Hm8",
+    "Pelvic Tilts": "JPaiq9wd7ko",
+    "Thread The Needle": "oAQ_qycUj5o",
+    "Open Books": "rDviWORCWEw",
+    "Thoracic Extension w/ Foam Roller": "ulcHUrE37Kw",
+    "Thoracic CARs Each Direction (slow)": "2lCochWaW9A",
+    "90s / 90s": "_rzJ1RXhM90",
+    "Hip CARs Each Direction": "PwxO_Zn4hI4",
+    "Worlds Greatest Stretch": "-CiWQ2IvY34",
+    "Deep Squat Holds (explore)": "0wzrgyAurT8",
+    "Couch Stretch": "-rsIS-wl-ig",
+    "Shoulder CARs": "2hyNG1U5wYs",
+    "Scapular Push ups": "LeMk15TN0No",
+    "Band Pull Aparts": "smSSXITNpCI",
+    "External Rotation": "_UvmPNGtlPM",
+    "Wrist CARs": "KdM1KlmVgek",
+    "Forward Wrist Rocks": "V8X-LDd8HF8",
+    "Backwards Wrist Rocks": "bh5yWtpst94",
+    "Side 2 Side Wrist Rocks": "k-MdBk0L6yw",
+    "ATG Squat Hold": "EK-Xn1JFeAw",
+    "Cossack Squat": "JaCbmoDqUc4",
+    "Jefferson Curls": "YGlAdtSKQaU",
+    "Hanging Scapular Shrug": "w6xP2MWfG78",
+    "Spanish Squats": "3igyh6eqGvc",
+    "Tibialis Raises": "mmLnKYwdDMM",
+    "Standing Calf Raises": "EmyjIRHl3CU",
+    "Single Leg Calf Raises": "u1Yc75YdiJA",
+    "Wrist Flexor/Extensor Strength": "eOYwu-dHAD4",
+    "Finger Extensions": "rbV3rOvKUZM",
+    "Single Leg Balance": "Dtgh2_LFkBQ",
+    "Eyes Closed Single Leg Balance": "4HtOeds_vyw",
+    "Short Foot Exercise": "m1lkcg8p-48",
+    "Toe Yoga": "QkrwfbtUzyU",
+    "Farmer Carry": "lLAw6fUccKA"
+  };
+
   var KIND = { w: "Work", t: "Transition", s: "Section" };
   var COLOR = { w: "var(--work)", t: "var(--trans)", s: "var(--sect)" };
 
@@ -86,6 +125,7 @@
     pause: document.getElementById("cc-pause"),
     skip: document.getElementById("cc-skip"),
     reset: document.getElementById("cc-reset"),
+    voice: document.getElementById("cc-voice"),
     list: document.querySelector("#cc-list ol")
   };
 
@@ -96,16 +136,85 @@
     return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r;
   }
 
-  // build the exercise list once
+  function ytSearch(name) {
+    return "https://www.youtube.com/results?search_query=" + encodeURIComponent(name + " exercise how to");
+  }
+
+  // speech synthesis, muted via the voice checkbox
+  var canSpeak = "speechSynthesis" in window;
+  function say(text, interrupt) {
+    if (!canSpeak || !el.voice.checked) { return; }
+    try {
+      if (interrupt) { window.speechSynthesis.cancel(); }
+      var u = new SpeechSynthesisUtterance(text);
+      u.rate = 1.05;
+      window.speechSynthesis.speak(u);
+    } catch (e) {}
+  }
+
+  // build the exercise list, each work/section row expands to a demo video
   SEQ.forEach(function (s, i) {
     var li = document.createElement("li");
     li.className = s[2] === "t" ? "transition" : s[2] === "s" ? "section" : "";
     li.dataset.i = i;
-    li.innerHTML = '<span class="n"></span><span class="d">' + fmt(s[1]) + "</span>";
-    li.querySelector(".n").textContent = s[0];
+
+    var row = document.createElement("div");
+    row.className = "row";
+    var left = document.createElement("div");
+    left.className = "left";
+    var nameSpan = document.createElement("span");
+    nameSpan.className = "n";
+    nameSpan.textContent = s[0];
+    left.appendChild(nameSpan);
+    var right = document.createElement("div");
+    right.className = "right";
+    if (s[2] === "w") {
+      var vb = document.createElement("button");
+      vb.className = "cc-vidbtn";
+      vb.type = "button";
+      vb.textContent = "video";
+      right.appendChild(vb);
+    }
+    var d = document.createElement("span");
+    d.className = "d";
+    d.textContent = fmt(s[1]);
+    right.appendChild(d);
+    row.appendChild(left);
+    row.appendChild(right);
+    li.appendChild(row);
     el.list.appendChild(li);
+
+    if (s[2] === "w") {
+      right.querySelector(".cc-vidbtn").addEventListener("click", function (e) {
+        e.stopPropagation();
+        toggleEmbed(li, s[0], this);
+      });
+    }
   });
   var liEls = el.list.querySelectorAll("li");
+
+  function toggleEmbed(li, name, btn) {
+    var existing = li.querySelector(".cc-embed");
+    if (existing) { existing.remove(); btn.textContent = "video"; return; }
+    btn.textContent = "hide";
+    var box = document.createElement("div");
+    box.className = "cc-embed";
+    var id = VIDEOS[name];
+    if (id) {
+      var iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube-nocookie.com/embed/" + id;
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+      iframe.loading = "lazy";
+      box.appendChild(iframe);
+    }
+    var link = document.createElement("div");
+    link.innerHTML = (id ? "" : '<span class="miss">No demo saved. </span>')
+      + '<a target="_blank" rel="noopener" href="' + ytSearch(name) + '">'
+      + (id ? "wrong video? search YouTube" : "search YouTube") + "</a>";
+    box.appendChild(link);
+    li.appendChild(box);
+  }
 
   // web audio beep, no assets needed
   var ac = null;
@@ -126,6 +235,26 @@
     var t = 0;
     for (var k = 0; k < i; k++) { t += SEQ[k][1]; }
     return t;
+  }
+
+  // spoken name for a segment, cleaned up for the announcer
+  function spoken(name) {
+    return name
+      .replace("w/", "with")
+      .replace("CARs", "cars")
+      .replace("90s / 90s", "nineties")
+      .replace("WGS", "world's greatest stretch")
+      .replace("2", "to");
+  }
+
+  function announceCurrent() {
+    var s = SEQ[idx];
+    if (s[2] === "t") {
+      var nx = SEQ[idx + 1];
+      say(nx ? "Next up, " + spoken(nx[0]) : "Last one", true);
+    } else {
+      say(spoken(s[0]), true);
+    }
   }
 
   function render() {
@@ -154,6 +283,7 @@
       idx++;
       remaining = SEQ[idx][1];
       beep(SEQ[idx][2] === "t" ? 660 : 880, 0.18);
+      announceCurrent();
       render();
     } else {
       finish();
@@ -164,6 +294,7 @@
     stop();
     beep(988, 0.25);
     setTimeout(function () { beep(1319, 0.35); }, 200);
+    say("Circuit complete. Nice work.", true);
     el.kind.textContent = "Done";
     el.name.textContent = "Circuit complete";
     el.time.textContent = fmt(totalSecs);
@@ -177,7 +308,10 @@
     if (remaining <= 0) {
       advance();
     } else {
-      if (remaining <= 3) { beep(remaining === 1 ? 784 : 523, 0.09); }
+      if (remaining <= 5) {
+        beep(remaining === 1 ? 784 : 523, 0.09);
+        say(String(remaining), false);
+      }
       render();
     }
   }
@@ -198,6 +332,7 @@
     running = true;
     if (ac && ac.state === "suspended") { ac.resume(); }
     beep(880, 0.15);
+    announceCurrent();
     requestWake();
     tickId = setInterval(tick, 1000);
     el.start.textContent = "Running";
@@ -213,6 +348,7 @@
 
   function reset() {
     stop();
+    if (canSpeak) { window.speechSynthesis.cancel(); }
     idx = 0; remaining = SEQ[0][1];
     el.start.textContent = "Start";
     el.start.classList.remove("running");
@@ -222,6 +358,8 @@
 
   el.start.addEventListener("click", function () {
     if (!ac) { beep(0.001, 0.001); }
+    // prime the speech engine inside the user gesture so ios lets it talk later
+    if (canSpeak && el.voice.checked) { say(" ", true); }
     if (running) {
       stop();
       el.start.textContent = "Resume";
