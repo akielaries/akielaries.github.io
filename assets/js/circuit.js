@@ -74,7 +74,7 @@
     var items = [];
     round.forEach(function (ex, i) {
       items.push(W(ex.name, ex.secs));
-      if (i < round.length - 1) { items.push(R(15)); }
+      if (i < round.length - 1) { items.push(R(10)); }
     });
     if (r < 3) { items.push(R(45)); }
     push(items, "Round " + r + " of 3");
