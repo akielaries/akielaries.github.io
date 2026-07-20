@@ -1,14 +1,15 @@
 ---
 permalink: /circuit/
 title: "Sweat Circuit"
-excerpt: "A press-start-and-go full-body circuit, about 34 minutes."
+excerpt: "A press-start-and-go full-body circuit, about 30 minutes."
 author_profile: true
 ---
 
-A roughly 34-minute full-body circuit: a mobility warm-up, three rounds of
+A roughly 30-minute full-body circuit: a mobility warm-up, three rounds of
 strength and cardio, then a cool-down. Press start and go. It speaks the next
 move, counts you down, and advances on its own. Every move has a one-line
-how-to, and a "watch demo" link if you want to see it.
+how-to, a reference photo of the start and end position, and a "watch demo"
+link.
 
 <style>
   #circuit { max-width: 620px; margin: 1rem auto; }
@@ -43,6 +44,12 @@ how-to, and a "watch demo" link if you want to see it.
   #cc-list li.work .n { font-weight:700; font-size:1.02rem; }
   #cc-list li.work .d { font-variant-numeric:tabular-nums; color:#6b7280; flex:none; }
   #cc-list li.work .desc { font-size:.88rem; color:#4b5563; margin:.25rem 0 .1rem; line-height:1.4; }
+  #cc-list li.work .media { display:flex; gap:.5rem; margin:.5rem 0 .5rem; }
+  #cc-list li.work .media figure { flex:1 1 0; margin:0; min-width:0; }
+  #cc-list li.work .media img { width:100%; border-radius:8px; display:block; background:#eee; }
+  #cc-list li.work .media figcaption { font-size:.7rem; text-align:center; color:#6b7280; margin-top:.15rem; }
+  #cc-list li.work .media.single { justify-content:center; }
+  #cc-list li.work .media.single img { width:auto; max-width:220px; max-height:200px; }
   #cc-list li.work .demo { font-size:.8rem; color:#2563eb; text-decoration:none; }
   #cc-list li.work .demo:hover { text-decoration:underline; }
   #cc-list li.rest { display:flex; justify-content:space-between; padding:.35rem .2rem; font-size:.82rem;

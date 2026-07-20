@@ -6,20 +6,40 @@
     "Thread the Needle": "On all fours; reach one arm under the other and rotate your upper back, then switch.",
     "Banded Side Steps": "Band around your legs; stay in a half-squat and step side to side.",
     "Banded Monster Walks": "Band around your legs; walk forward and back in a partial squat, keeping tension.",
-    "Leg Swings (front to back)": "Hold a wall or door; swing one leg forward and back, then switch legs halfway.",
-    "Standing Hip Circles": "Hold a support; lift one knee and draw big circles with the hip, switch legs halfway.",
+    "Standing Hip Circles": "Hold a support; lift one knee and draw big circles with the hip (swing it around), switch legs halfway.",
     "Bodyweight Squats": "Feet shoulder-width; sit back and down until thighs near parallel, then stand tall.",
-    "Reverse Lunges": "Step one foot back and lower until both knees bend about 90 degrees; alternate legs.",
+    "Walking Lunges": "Step forward into a lunge until both knees bend about 90 degrees, then step through onto the other leg.",
     "Calf Raises": "Rise up onto the balls of your feet, then lower slowly. Hold a wall if you need balance.",
     "Glute Bridges": "On your back, knees bent; drive your hips up squeezing your glutes, then lower.",
     "Push-ups": "Hands under shoulders; lower your chest toward the floor and press up. Drop to knees if needed.",
     "Mountain Climbers": "In a plank, quickly drive your knees toward your chest one at a time.",
-    "High Knees": "Run in place, driving your knees up high and pumping your arms.",
     "Plank": "Forearms and toes down; hold a straight line from head to heels, brace your core.",
     "Jumping Jacks": "Jump your feet out while raising your arms overhead, then back in.",
     "Child's Pose": "Kneel and sit back onto your heels, reaching your arms forward on the floor. Breathe.",
     "Standing Forward Fold": "Hinge at the hips and hang toward your toes, letting your neck relax.",
-    "Quad Stretch": "Stand tall, pull one heel toward your glute; hold, then switch. Hold a wall for balance."
+    "Quad Stretch": "Stand tall, pull one heel toward your glute; hold, then switch. Hold a wall for balance.",
+    "Thread the Needle": "On all fours; reach one arm under the other and rotate your upper back, then switch."
+  };
+
+  // reference diagrams: real start/end photos from free-exercise-db, plus one animation
+  var PHOTO_DB = "https://cdn.jsdelivr.net/gh/yuhonas/free-exercise-db@main/exercises/";
+  var PHOTOS = {
+    "Cat Cow": { db: "Cat_Stretch" },
+    "Pelvic Tilts": { db: "Pelvic_Tilt_Into_Bridge" },
+    "Banded Side Steps": { db: "Monster_Walk" },
+    "Banded Monster Walks": { db: "Monster_Walk" },
+    "Standing Hip Circles": { db: "Standing_Hip_Circles" },
+    "Bodyweight Squats": { db: "Bodyweight_Squat" },
+    "Walking Lunges": { db: "Bodyweight_Walking_Lunge" },
+    "Calf Raises": { db: "Standing_Calf_Raises" },
+    "Glute Bridges": { db: "Butt_Lift_Bridge" },
+    "Push-ups": { db: "Pushups" },
+    "Mountain Climbers": { db: "Mountain_Climbers" },
+    "Plank": { db: "Plank" },
+    "Jumping Jacks": { gif: "https://commons.wikimedia.org/wiki/Special:FilePath/Vitruvian%20jumping%20jacks.gif?width=400" },
+    "Child's Pose": { db: "Childs_Pose" },
+    "Standing Forward Fold": { db: "Standing_Toe_Touches" },
+    "Quad Stretch": { db: "Quad_Stretch" }
   };
 
   function W(name, secs) { return { name: name, secs: secs, kind: "w" }; }
@@ -37,18 +57,16 @@
     W("Thread the Needle", 60),
     W("Banded Side Steps", 45),
     W("Banded Monster Walks", 45),
-    W("Leg Swings (front to back)", 60),
-    W("Standing Hip Circles", 45)
+    W("Standing Hip Circles", 60)
   ], "Warm-up");
 
   var round = [
     W("Bodyweight Squats", 45),
-    W("Reverse Lunges", 45),
+    W("Walking Lunges", 45),
     W("Calf Raises", 40),
     W("Glute Bridges", 40),
-    W("Push-ups", 30),
+    W("Push-ups", 35),
     W("Mountain Climbers", 40),
-    W("High Knees", 40),
     W("Plank", 40),
     W("Jumping Jacks", 40)
   ];
@@ -143,6 +161,28 @@
         p.className = "desc";
         p.textContent = DESC[s.name];
         li.appendChild(p);
+      }
+      var ph = PHOTOS[s.name];
+      if (ph) {
+        var media = document.createElement("div");
+        media.className = "media" + (ph.gif ? " single" : "");
+        if (ph.gif) {
+          var g = document.createElement("img");
+          g.loading = "lazy"; g.alt = s.name; g.src = ph.gif;
+          media.appendChild(g);
+        } else {
+          [["0", "start"], ["1", "end"]].forEach(function (k) {
+            var fig = document.createElement("figure");
+            var img = document.createElement("img");
+            img.loading = "lazy"; img.alt = s.name + " " + k[1];
+            img.src = PHOTO_DB + ph.db + "/" + k[0] + ".jpg";
+            var cap = document.createElement("figcaption");
+            cap.textContent = k[1];
+            fig.appendChild(img); fig.appendChild(cap);
+            media.appendChild(fig);
+          });
+        }
+        li.appendChild(media);
       }
       var a = document.createElement("a");
       a.className = "demo";
