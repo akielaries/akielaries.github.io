@@ -18,7 +18,14 @@
     "Child's Pose": "Kneel and sit back onto your heels, reaching your arms forward on the floor. Breathe.",
     "Standing Forward Fold": "Hinge at the hips and hang toward your toes, letting your neck relax.",
     "Quad Stretch": "Stand tall, pull one heel toward your glute; hold, then switch. Hold a wall for balance.",
-    "Thread the Needle": "On all fours; reach one arm under the other and rotate your upper back, then switch."
+    "Thread the Needle": "On all fours; reach one arm under the other and rotate your upper back, then switch.",
+    "Band Pull Aparts": "Hold a band out in front at shoulder height; pull it apart to your chest, squeezing your shoulder blades.",
+    "Banded Shoulder Press": "Stand on the band, handles at your shoulders; press straight overhead, then lower.",
+    "Banded Lateral Raises": "Stand on the band; raise your arms out to the sides up to shoulder height, then lower slowly.",
+    "Banded Upright Rows": "Stand on the band; pull the handles straight up toward your collarbone, elbows leading.",
+    "Banded Biceps Curls": "Stand on the band, palms forward; curl the handles up to your shoulders, then lower slowly.",
+    "Banded Triceps Extension": "Anchor the band above you; keep your elbows pinned and extend your forearms straight down.",
+    "Banded Overhead Triceps": "Band anchored behind you, arms overhead; straighten your elbows fully, then bend back."
   };
 
   // reference diagrams: real start/end photos from free-exercise-db, plus one animation
@@ -39,7 +46,13 @@
     "Jumping Jacks": { gif: "https://commons.wikimedia.org/wiki/Special:FilePath/Vitruvian%20jumping%20jacks.gif?width=400" },
     "Child's Pose": { db: "Childs_Pose" },
     "Standing Forward Fold": { db: "Standing_Toe_Touches" },
-    "Quad Stretch": { db: "Quad_Stretch" }
+    "Quad Stretch": { db: "Quad_Stretch" },
+    "Band Pull Aparts": { db: "Band_Pull_Apart" },
+    "Banded Shoulder Press": { db: "Shoulder_Press_-_With_Bands" },
+    "Banded Lateral Raises": { db: "Lateral_Raise_-_With_Bands" },
+    "Banded Upright Rows": { db: "Upright_Row_-_With_Bands" },
+    "Banded Triceps Extension": { db: "Band_Skull_Crusher" },
+    "Banded Overhead Triceps": { db: "Speed_Band_Overhead_Triceps" }
   };
 
   function W(name, secs) { return { name: name, secs: secs, kind: "w" }; }
@@ -79,6 +92,22 @@
     if (r < 3) { items.push(R(45)); }
     push(items, "Round " + r + " of 3");
   }
+
+  var arms = [
+    W("Band Pull Aparts", 40),
+    W("Banded Shoulder Press", 40),
+    W("Banded Lateral Raises", 40),
+    W("Banded Upright Rows", 40),
+    W("Banded Biceps Curls", 40),
+    W("Banded Triceps Extension", 40),
+    W("Banded Overhead Triceps", 40)
+  ];
+  var armItems = [];
+  arms.forEach(function (ex, i) {
+    armItems.push(ex);
+    if (i < arms.length - 1) { armItems.push(R(10)); }
+  });
+  push(armItems, "Band Arms");
 
   push([
     W("Child's Pose", 45),
